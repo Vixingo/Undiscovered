@@ -1,0 +1,39 @@
+.main_app_bar_text_div > .NavLink {
+  text-decoration: none;
+  color: black !important;
+}
+
+.inner_item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.profile_pic_box {
+  width: 37px;
+  height: 37px;
+  border-radius: 37px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.profile_pic_box > img {
+  width: 100%;
+  aspect-ratio: 3/3;
+  object-fit: cover;
+}
+.main_dropdown_div {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 1rem !important;
+  background-color: #000000 !important;
+  border: none !important;
+  color: rgb(183, 180, 180) !important;
+  box-shadow: none !important;
+  border-radius: 10px !important;
+  z-index: 999999;
+}
+.dropdown-toggle::after {
+  font-size: 20px;
+}

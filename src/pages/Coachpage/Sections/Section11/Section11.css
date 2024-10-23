@@ -1,0 +1,131 @@
+.main_sec11_div {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0rem;
+}
+.sub_main_sec11 {
+  width: 100%;
+  height: 90%;
+  background-color: #ff3333;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.div_of_sec11_content {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+.text_div_of_sec11 {
+  width: 90%;
+}
+
+.image_div_of_sec11 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image_div_of_sec11 > img {
+  width: 45%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.text_div_of_sec11 {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 2rem;
+}
+
+.text_div_of_sec11 > h1 {
+  color: #ffffff;
+  font-size: 26px;
+  text-align: center;
+  font-style: normal;
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.text_div_of_sec11 > p {
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.store_icon_div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.store_icon_div > img {
+  width: 25%;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+}
+.input_box {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+  padding: 5px 10px;
+}
+.input_box > input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: #ffffff;
+}
+.input_box > input::placeholder {
+  color: #ffffff;
+}
+
+.input_div_main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .main_sec11_div {
+    height: 100%;
+  }
+  .sub_main_sec11 {
+  }
+  .div_of_sec11_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .input_div_main {
+    flex-direction: column;
+  }
+  .store_icon_div {
+    justify-content: center;
+  }
+  .store_icon_div > img {
+    width: 35%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+  }
+}

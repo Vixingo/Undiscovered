@@ -1,0 +1,12 @@
+.main_section_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.submain_div_of_sections {
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0rem;
+}

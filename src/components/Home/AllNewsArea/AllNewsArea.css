@@ -1,0 +1,44 @@
+.home--news--tab .react-tabs__tab-list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  border: none;
+}
+
+.home--news--tab .react-tabs__tab {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: normal;
+  padding: 10px 60px;
+  border: none;
+  border-bottom: 1px solid transparent;
+}
+
+.home--news--tab .react-tabs__tab.react-tabs__tab--selected {
+  color: #f33;
+  border-color: #f33;
+}
+
+@media screen and (min-width: 360px) {
+  .home--news--tab .react-tabs__tab {
+    padding: 10px 14px;
+    font-size: 16px;
+    justify-content: center;
+  }
+  .home--news--tab .react-tabs__tab-list {
+    gap: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home--news--tab .react-tabs__tab {
+    padding: 10px 60px;
+    font-size: 20px;
+  }
+  .home--news--tab .react-tabs__tab-list {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    border: none;
+  }
+}

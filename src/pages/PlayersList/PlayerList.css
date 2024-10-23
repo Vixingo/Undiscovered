@@ -1,0 +1,119 @@
+.player-list-table tr td {
+    padding: 16px 0px 28px;
+}
+
+.player-list-table tr {
+    border-bottom: 1px solid #dbdbdb;
+}
+.player-list-table tr:last-child {
+    border: none;
+}
+
+.player-list-table tr:first-child th {
+    padding-bottom: 14px;
+}
+
+.player-list-table tr th {
+    text-align: start;
+}
+
+.player-list-table tr td:nth-child(2) {
+    width: 25%;
+}
+.player-list-table tr td:nth-child(3),
+.player-list-table tr td:nth-child(4),
+.player-list-table tr td:nth-child(5) {
+    width: 10%;
+}
+.Toggle_main_div_ {
+    justify-content: end;
+}
+.filtered-list-player {
+    display: flex;
+    flex-direction: column;
+}
+.filtered-list-player > :nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.filtered-list-player > :nth-child(odd) {
+    background-color: white;
+}
+.filtered-list-player > :last-child {
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.div_of_username {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.postion_text {
+    border: 0.5px solid #888888;
+    padding: 5px;
+    margin: 0;
+    border-radius: 50%;
+    color: #888888;
+    font-size: 12px;
+}
+.follow_btn {
+    border: 1px solid #2378d3;
+    padding: 5px 14px;
+    border-radius: 30px;
+    color: #2378d3;
+    cursor: pointer;
+}
+.follow_btn2 {
+    border: 1px solid #4d4d4d;
+    padding: 5px 14px;
+    border-radius: 30px;
+    color: #4d4d4d;
+    cursor: pointer;
+}
+.toggel_show_div {
+    width: 70%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.player_container_video {
+    width: 430px !important;
+    height: 278px !important;
+}
+
+@media screen and (min-width: 360px) {
+    .player-list-table tr td,
+    .player-list-table tr th {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+@media screen and (max-width: 540px) {
+    .Toggle_main_div_ {
+        justify-content: center;
+    }
+    .toggel_show_div {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+    .player_status_title_text,
+    .player_status_text {
+        display: none;
+    }
+    .social_icone_main_div {
+        justify-content: center;
+    }
+    .player_container_video {
+        width: 330px !important;
+        height: 220px !important;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .player-list-table tr td,
+    .player-list-table tr th {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}

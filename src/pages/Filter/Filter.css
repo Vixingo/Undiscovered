@@ -1,0 +1,41 @@
+.filter--form .common--title {
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  padding-bottom: 10px;
+}
+
+.filter--form input[type="radio"] {
+  display: none;
+}
+
+.filter--form input[type="radio"] + label {
+  padding: 8px 24px;
+  border-radius: 30px;
+  border-radius: 30px;
+  border: 1px solid #898989;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  display: block;
+  cursor: pointer;
+}
+
+.filter--form input[type="radio"]:checked + label {
+  background-color: #f33;
+  color: #fff;
+  border-color: transparent;
+}
+
+.filter--form .large--inputs .single--input {
+  width: 100%;
+}
+
+.filter--form .large--inputs input[type="radio"] + label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

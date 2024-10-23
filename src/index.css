@@ -1,0 +1,44 @@
+/* google fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* google fonts */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "SF Pro Display";
+    font-weight: 500;
+    background-color: linear-gradient(
+        rgba(109, 106, 149, 0.2),
+        rgba(88, 89, 124, 0.2),
+        rgba(239, 237, 254, 0.2)
+    );
+}
+
+.slick-arrow.slick-prev::before {
+    display: none !important;
+}
+
+.slick-arrow.slick-next::before {
+    display: none !important;
+}
+
+.slick-slide {
+    height: 100%;
+    min-height: 100%;
+}
+
+.slider-phone .slick-next {
+    bottom: -58px;
+    left: 40px;
+    right: auto;
+    top: auto;
+}
+.slider-phone .slick-prev {
+    bottom: -58px;
+    left: 0px;
+    top: auto;
+}

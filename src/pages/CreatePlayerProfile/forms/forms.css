@@ -1,0 +1,215 @@
+h2 {
+  margin-bottom: 40px;
+}
+.form-data {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.formFields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.formFields input,
+.formFields select,
+textarea {
+  padding: 15px 87px 15px 25px;
+  background: #f8fafc;
+  border-radius: 30px;
+}
+.addMoreButton {
+  border-radius: 30px;
+  width: fit-content;
+  background: #f33;
+  display: flex;
+  padding: 10px 25px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 2rem;
+}
+.media-guide {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0px 0px !important;
+  flex-direction: row !important;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+
+  background: #f8fafc;
+}
+.uploadMediaForm {
+  margin-top: 20px;
+}
+
+.dropzone {
+  width: 200px !important;
+  height: 50px !important;
+  padding: 0px !important;
+  border: 1px solid #fb0000 !important;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .mediaPreview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+} */
+.mediaPreview {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  width: 90%;
+}
+.mediaContainer {
+  position: relative;
+  width: 100% !important;
+  /* width: calc(33.333% - 10px); */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.mediaFile {
+  width: 100% !important;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+}
+
+.removeMediaButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.imageCropContainer {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Adjust as needed */
+  overflow: hidden; /* Ensure content does not overflow */
+}
+
+.croppedImageContainer {
+  margin-top: 20px;
+}
+
+.croppedImage {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ? model css */
+.modal_main_body_ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.modal_main_div_ {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  height: 100%;
+}
+.sub_main_div_link_uploading {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+.heading_text_div,
+.title_add_main_div,
+.description_main_div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.heading_text_div > h3,
+.heding_h3 {
+  font-size: 18px;
+  color: #4c8fe1;
+}
+.heading_text_div > p {
+  font-size: 16px;
+  color: #5a5a5a;
+}
+.input_embed_div,
+.title_input_div {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #5a5a5a;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.description_main_textariea_div {
+  width: 100% !important;
+  height: 80px !important;
+  border: 1px solid #5a5a5a !important;
+  border-radius: 8px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.description_main_textariea_div > textarea {
+  width: 98% !important;
+  height: 100% !important;
+  outline: none !important;
+  border: none !important;
+  border-radius: 0px !important;
+  padding: 0px !important;
+  resize: none !important;
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+.input_embed_div > input,
+.title_input_div > input {
+  width: 95%;
+  height: 95%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.main_heading_div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.error_video {
+  font-size: 14px !important;
+  color: #fb0000 !important;
+}

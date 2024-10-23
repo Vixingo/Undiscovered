@@ -1,0 +1,609 @@
+.Main_navbar {
+  position: relative;
+}
+.drop_box {
+  position: fixed;
+  top: 95px;
+  z-index: 2000;
+}
+
+.mainnav {
+  background-color: #ffffff;
+  /* background-color: #ffebeb; */
+  width: 100%;
+  height: 101px;
+  display: flex;
+  align-items: center;
+  /* border: 5px solid #082733; */
+  justify-content: center;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 2px 2px 20px black;
+}
+
+.modal {
+  position: fixed;
+  top: 8%;
+  right: 22%;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.khainiicon {
+  color: #ffffff;
+  transform: scale(1.3);
+}
+
+.dot {
+  background-color: #af7c0c;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  right: -5px;
+}
+
+#navbar > .logo > img {
+  width: 136px;
+  cursor: pointer;
+}
+
+.loginbtn {
+  background-color: #af7c0c;
+  width: 100px;
+  height: 40px;
+  border-radius: 60px;
+  color: #000000;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  transition: 0.3s ease-in-out;
+}
+
+#dropdown-basic-button {
+  background-color: #af7c0c !important;
+  border: none !important;
+}
+
+.loginbtn:hover {
+  background-color: #ffffff;
+  color: #082733;
+}
+
+.menubtn {
+  color: #000000;
+  display: none;
+}
+.show_in_mobile {
+  display: none;
+}
+.show_in_web {
+  display: block;
+}
+
+#navbar {
+  padding: 0 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: none !important;
+}
+
+#navbar > ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin: 0 !important;
+  /* padding-left: 0 !important; */
+}
+
+#navbar > ul > .findbtn {
+  background-color: #af7c0c;
+  width: 120px;
+  height: 40px;
+  border-radius: 60px;
+  color: #000000;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#navbar > ul > li {
+  list-style: none;
+}
+
+#navbar > ul > li > a {
+  text-decoration: none;
+  color: #000000;
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  cursor: pointer;
+}
+
+#Lang {
+  width: 150px;
+  outline: none;
+  border: none;
+  background-color: #e30a17;
+  color: white;
+  text-align: center;
+  font-family: "Be Viettnam Pro Bold";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  cursor: pointer;
+}
+option:hover {
+  background: #060606 !important;
+}
+.loginlink {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Be Viettnam Pro Bold";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* #navbar > ul > li > a:active,
+#navbar > ul > li > a.active {
+  border-bottom: 3px solid #000000;
+} */
+
+.navlinks > .user > h3 {
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  user-select: none;
+}
+
+.navlinks > .user > h3 > i {
+  padding-top: 10px;
+  display: block;
+}
+
+.btns > .btn1 {
+  background: #c3002f !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  width: 110px;
+  height: 40px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: -0.500211px;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  font-family: "Be Viettnam Pro Bold";
+}
+
+.btns > .btn2 {
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 19px;
+  letter-spacing: -0.500211px;
+  font-family: "Be Viettnam Pro Bold";
+}
+
+.btns > span > button {
+  background: #c3002f;
+  border-radius: 11px;
+  width: 40px;
+  height: 40px;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.500211px;
+  color: #ffffff;
+  font-family: "Be Viettnam Pro Bold";
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btns > span {
+  cursor: pointer;
+}
+
+.btns > div {
+  cursor: pointer;
+}
+.download_btn {
+  border-radius: 48px;
+  background: #000;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: "Be Viettnam Pro Bold";
+  padding: 12px 15px;
+  cursor: pointer;
+}
+.download_btn > a:hover {
+  color: #fff;
+}
+.logo2 {
+  display: none;
+}
+.User_info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.div_img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.User_info > p {
+  margin-bottom: 0;
+  color: #fff;
+  text-align: center;
+  font-family: "Be Viettnam Pro Bold";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.div_img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profile_pic_box {
+  width: 37px;
+  height: 37px;
+  border-radius: 37px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.profile_pic_box > img {
+  width: 100%;
+  aspect-ratio: 3/3;
+  object-fit: cover;
+}
+.USer_name {
+  margin-bottom: 0;
+  color: #fff !important;
+  text-align: center;
+  font-family: "Be Viettnam Pro Bold";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.main_dropdown_div {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 1rem !important;
+  background-color: #000000 !important;
+  border: none !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  border-radius: 10px !important;
+  z-index: 999999;
+}
+.dropdown-item:hover {
+  color: #fff !important;
+}
+.dropdown-menu > li:first-child .dropdown-item,
+.dropdown-menu > li:not(:first-child):not(:last-child) .dropdown-item,
+.dropdown-menu > li:last-child .dropdown-item {
+  background-color: #000000 !important;
+  color: #fff !important;
+}
+
+.dropdown-toggle::after {
+  font-size: 20px;
+  color: #fff !important;
+}
+.inner_item {
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 1rem !important;
+  padding: 0px 10px;
+}
+.btn-group {
+  background-color: transparent !important;
+  border-radius: 11px !important;
+}
+
+@media screen and (max-width: 1500px) {
+  #navbar > ul > li > a {
+    font-size: 14px;
+    /* padding-left: 10px; */
+  }
+}
+
+@media screen and (max-width: 1380px) {
+  #navbar > ul > li > a {
+    font-size: 11px;
+    /* padding-left: 10px; */
+  }
+}
+@media screen and (max-width: 1080px) {
+  #navbar > ul > li > a {
+    font-size: 14px;
+  }
+
+  #navbar > ul {
+    align-items: flex-start;
+    padding-left: 1rem;
+  }
+
+  .btns {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  #navbar > ul {
+    gap: 1rem;
+  }
+
+  #navbar {
+    position: relative;
+    width: 100%;
+  }
+
+  .navlinks {
+    flex-direction: column;
+    position: absolute;
+    top: 123%;
+    left: 0;
+    /* background-color: #082733d7; */
+    background-color: #5c5c5c71;
+    /* background-color: rgb(41, 45, 50, 0.5); */
+    background-color: blur;
+    backdrop-filter: blur(10px);
+    width: 30%;
+    padding: 2.5rem 0;
+    transform: translate(-100%);
+    transition: all 0.3s ease-in;
+    z-index: 1;
+  }
+
+  .mobilemenu {
+    transform: translate(0%);
+  }
+
+  .menubtn {
+    display: block;
+  }
+  .show_in_mobile {
+    display: block;
+  }
+  .show_in_web {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .modal {
+    top: 11%;
+    right: 8%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .navlinks {
+    top: 140%;
+    width: 100%;
+    height: 100vh;
+  }
+
+  #navbar > ul {
+    justify-content: flex-start;
+  }
+
+  #navbar > ul > li > a {
+    font-size: 16px;
+    padding-left: 10px;
+  }
+  #Lang {
+    width: 120px;
+    outline: none;
+    border: none;
+    color: white;
+    text-align: center;
+    font-family: "Be Viettnam Pro Bold";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+    background-color: transparent;
+    /* background: #e30a1800 !important; */
+  }
+}
+
+@media screen and (max-width: 430px) {
+  #navbar {
+    gap: 1rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  /* .mainnav{
+      z-index: 11111;
+    } */
+
+  .btns > :nth-child(1) {
+    font-size: 19px;
+    border-radius: 10px;
+  }
+
+  .btns > :nth-child(2) > button {
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+  }
+
+  .btns > .btn1 {
+    width: 90px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  #navbar > .logo2 > img {
+    width: 90px;
+  }
+
+  /* .btns > span > button {
+    width: 49px;
+    height: 40px;
+    font-size: 18px;
+  } */
+
+  .btns > span {
+    font-size: 20px;
+  }
+  .logo2 {
+    display: block;
+  }
+  .logo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 393px) {
+  .btns > .btn1 {
+    width: 90px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 10px;
+  }
+
+  .btns {
+    gap: 0.8rem;
+  }
+
+  .btns > :nth-child(2) > button {
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+
+  .btns > .btn2 {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 10px;
+  }
+
+  #navbar {
+    gap: 0.8rem;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  #navbar {
+    gap: 0.7rem;
+    padding: 0 1rem;
+  }
+  .btns > span > button {
+    width: 35px;
+    height: 35px;
+  }
+
+  .btns > a > img {
+    width: 20px;
+  }
+  .btns > .btn1 {
+    width: 50px;
+    height: 30px;
+    font-size: 10px;
+    line-height: 20px;
+    border-radius: 10px;
+  }
+
+  .btns > :nth-child(2) > button {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+  .drop_box {
+    position: absolute;
+    top: -100px;
+    right: 200px;
+  }
+}
+
+/* Nav.css */
+
+.navlinks {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navlinks a {
+  position: relative;
+  color: #000000; /* Adjust as needed */
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+.navlinks a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: rgb(0, 0, 0);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navlinks a:hover::before,
+.navlinks a.active::before {
+  width: 100%;
+  left: 0;
+}

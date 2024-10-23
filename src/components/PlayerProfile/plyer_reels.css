@@ -1,0 +1,112 @@
+.embed_video_heading_div {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.inner_div_of_upload_video {
+  width: 100%;
+  height: 100px;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 20% 75%;
+  place-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: #07070733 0px 0px 8px;
+  cursor: pointer;
+}
+.icon_div {
+  width: 90%;
+  height: 90%;
+  background-color: #ff333345;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+.text_upload_div {
+  width: 100%;
+}
+.text_upload_div > h3 {
+  font-size: 18px;
+  color: #4c8fe1;
+}
+.text_upload_div > p {
+  font-size: 18px;
+  color: #5a5a5a;
+}
+#main_image_ {
+  object-fit: contain !important;
+}
+
+div.gallery-item {
+  float: left;
+  width: 33.3333333%;
+  padding-bottom: 33.3333333%;
+  position: relative;
+}
+
+div.gallery-item a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  text-align: center;
+  border: 1px solid #3c3c3c;
+}
+div.gallery-item img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+img {
+  max-height: 100vh;
+  max-width: 100%;
+  object-fit: contain;
+}
+.iframe_video {
+  width: 100%;
+  height: 200px; /* Set a fixed height to ensure uniformity */
+  padding: 0;
+  margin-bottom: 20px; /* Add some spacing between video elements */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden; /* Ensure that content doesn't overflow */
+  background-color: #000; /* Add a background color for consistency */
+  border-radius: 8px; /* Optional: adds rounded corners */
+}
+
+.iframe_video > iframe {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; /* Remove border for clean look */
+  object-fit: cover; /* Ensures the content covers the container evenly */
+}
+.shadow_video {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px !important;
+  border: 0.5px solid #ff3333;
+}
+@media screen and (max-width: 767px) {
+  .embed_video_heading_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+}

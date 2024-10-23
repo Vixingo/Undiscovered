@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.personal-stats .holder {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+
+.personal-stats .holder::after {
+  content: "";
+  top: 0;
+  right: -20px;
+  position: absolute;
+  width: 2px;
+  height: 28px;
+  background-color: rgba(110, 119, 154, 0.2);
+}
+
+.personal-stats .holder:last-child:after {
+  display: none;
+}
+
+.personal-stats .holder p {
+  color: #131416;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20.8px;
+}
+
+.personal-stats .holder .value {
+  color: #131416;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.info-box {
+  background: #fff;
+
+  box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.05);
+}
+
+.season-stats .holder {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.season-stats .holder::after {
+  content: "";
+  top: 0;
+  right: -50px;
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: #9c9c9c;
+}
+
+.season-stats .holder:last-child:after {
+  display: none;
+}
+
+.season-stats .holder .value {
+  color: #000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.small--gray--text {
+  color: #6a6a6a;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.player-content .react-tabs__tab-list {
+  border: none;
+}
+
+.player-content .react-tabs__tab {
+  padding: 8px 70px;
+  color: #0e0e0e;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  border: none;
+  border-bottom: 1px solid transparent;
+}
+
+.player-content .react-tabs__tab--selected {
+  border-color: #f33;
+  color: #f33;
+}
+
+.ReactCollapse--collapse {
+  transition: height 500ms;
+}
+
+.single-profile-content .title {
+  color: #6a6a6a;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20.8px;
+}
+
+.single-profile-content .content {
+  padding-top: 16px;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.stats-table {
+  width: 100%;
+  border-radius: 0px 12px 0px 0px;
+}
+
+.stats-table th,
+.stats-table td {
+  text-align: start;
+  padding: 10px;
+  font-weight: 500;
+}
+
+.stats-table td {
+  background-color: #f8fafc;
+}
+
+.stats-table tr:first-child th:first-child {
+  border-radius: 12px 0px 0px 0px;
+}
+
+.stats-table tr:first-child th:last-child {
+  border-radius: 0px 12px 0px 0px;
+}
+
+.stats-table tr:last-child td:first-child {
+  border-radius: 0px 0px 0px 12px;
+}
+
+.stats-table tr:last-child td:last-child {
+  border-radius: 0px 0px 12px 0px;
+}
+.profile_main_div {
+  width: 60%;
+}
+.plyear_info_div {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.main_info_div_of_plyar {
+  width: 60%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 4px;
+}
+.contact_info_text {
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px; */
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+.contact_info_text > p > a {
+  text-decoration: none;
+  color: #000;
+}
+.main_info_div_of_conatct {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact_info_btn_main_div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.email_div_main_box > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 1rem 1.5rem;
+  background-color: #ff3333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.Phone_div_main_box > a {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  justify-content: center;
+  gap: 10px;
+  background-color: #ff3333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.email_div_main_box > a > p,
+.Phone_div_main_box > a > p {
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+}
+.email_div_main_box > a > span,
+.Phone_div_main_box > a > span {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+.EMAIL_teg {
+  width: 70%;
+  background-color: #e4e4e4;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  border-radius: 8px;
+}
+.email_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+.head_text_of_titile {
+  font-size: 18px;
+}
+@media screen and (min-width: 360px) {
+  .season-stats .holder::after {
+    right: -20px;
+  }
+
+  .player-content .react-tabs__tab-list {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 12px;
+  }
+
+  .player-content .react-tabs__tab-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .player-content .react-tabs__tab {
+    padding: 2px 10px;
+    min-width: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .profile_main_div {
+    width: 100%;
+  }
+  .plyear_info_div {
+    width: 100%;
+  }
+  .main_info_div_of_plyar {
+    width: 100%;
+  }
+  .contact_info_btn_main_div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .email_div_main_box > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: #ff3333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  .Phone_div_main_box > a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    justify-content: center;
+    gap: 10px;
+    background-color: #ff3333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  .email_div_main_box > a > p,
+  .Phone_div_main_box > a > p {
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  .EMAIL_teg {
+    width: 100%;
+    background-color: #e4e4e4;
+    padding: 0px 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 8px;
+  }
+  .email_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+  .personal-stats .holder .value {
+    color: #131416;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .head_text_of_titile {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .season-stats .holder::after {
+    right: -30px;
+  }
+
+  .player-content .react-tabs__tab {
+    padding: 8px 70px;
+    font-size: 16px;
+    font-style: normal;
+  }
+
+  .player-content .react-tabs__tab-list {
+    display: block;
+    overflow-x: initial;
+    overflow-y: initial;
+  }
+}
+
+.popup {
+  position: absolute;
+  top: 13rem;
+  /* Adjust as needed */
+
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.popup-item:hover {
+  background-color: #f0f0f0;
+}
+
+.popup-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+/* modal css */
+.modal_title_h2 {
+  color: #131416;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+}
+.modal_main_body {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal_main_div {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal_main_div > p {
+  color: #131416;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+.modal_main_div > p > span {
+  color: #4c8fe1;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.div_status_profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 10px;
+  border-radius: 40px;
+  background-color: #f1f1f158;
+  border: 1px solid;
+}
+.div_status_profile > p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
