@@ -43,7 +43,7 @@ const Pricing = () => {
   }, []);
 
   return (
-    <div className="lg:bg-white lg:px-36 rounded-xl mx-3 lg:py-20 mb-3">
+    <div className="lg:bg-white lg:px-36 rounded-xl mx-3 lg:py-20 mb-20">
       {/* top part */}
       <div className="flex flex-col items-center text-center">
         <p className="text-base font-medium leading-6 text-[#0E0E0E]">
@@ -98,7 +98,9 @@ const Pricing = () => {
             serviceList={serviceList2}
             activePlan={activePlan}
             setActivePlan={setActivePlan}
+            popular = {true}
           />
+
           <SinglePricing
             isToggled={isToggled}
             price={23.99}

@@ -20,6 +20,7 @@ const SinglePricing = ({
   isYearlyActive,
   activePlan,
   setActivePlan,
+  popular,
 }) => {
   const stripe = useStripe();
   const [loading, setLoading] = useState(false);
@@ -91,6 +92,16 @@ const SinglePricing = ({
         borderRadius: "15px",
       }}>
       {/* top */}
+      {
+        popular?
+        <>
+        <div>
+          <button className="bg-[#ED2023] text-white rounded-lg w-36 h-10 ">Most Popular</button>
+        </div>
+        </>
+        :""
+      }
+      
       <div className="flex flex-col items-center gap-2.5">
         <p className="text-[18px] text-[#131313] font-medium "> {title} </p>
         <p className="text-[18px] text-[#131313] font-medium ">
