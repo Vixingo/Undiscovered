@@ -42,7 +42,7 @@ const Layout = () => {
                     </div>
                 ) : (
                     <div
-                        className="max-w-[1440px] mx-auto mt-10 px-3 lg:px-[20px]"
+                        className="max-w-full mx-auto mt-10 px-3 lg:px-[20px]"//testing modification -sign shahi
                         style={{
                             marginTop: "7.3rem",
                             zIndex: "2",

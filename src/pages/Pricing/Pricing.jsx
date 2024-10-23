@@ -43,10 +43,10 @@ const Pricing = () => {
   }, []);
 
   return (
-    <div>
+    <div className="lg:bg-white lg:px-36 rounded-xl mx-3 lg:py-20 mb-3">
       {/* top part */}
       <div className="flex flex-col items-center text-center">
-        <p className="text-base font-normal leading-6 text-[#0E0E0E]">
+        <p className="text-base font-medium leading-6 text-[#0E0E0E]">
           Pricing Plan
         </p>
         <h3 className="text-[22px]  font-bold leading-8 text-[#0E0E0E]">
@@ -78,7 +78,7 @@ const Pricing = () => {
         </div>
 
         {/* pricing listgt area */}
-        <div className="flex items-START flex-col lg:flex-row lg:gap-[30px] mt-5 lg:mt-[50px] mb-12 lg:mb-[100px] ">
+        <div className="flex items-START flex-col lg:flex-row gap-[30px] mt-5 lg:mt-[50px]  lg:mb-[100px] ">
           <SinglePricing
             isToggled={isToggled}
             isYearlyActive={isYearlyActive}

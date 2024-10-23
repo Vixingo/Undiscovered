@@ -85,17 +85,17 @@ const SinglePricing = ({
   };
   return (
     <div
-      className="px-5 py-[30px] flex flex-col items-center gap-[30px] h-100"
+      className="lg:px-5 px-4 bg-white py-[30px] flex flex-col items-center gap-[30px] h-100 "
       style={{
-        boxShadow: "#000 0px 5px 15px",
-        borderRadius: "10px",
+        boxShadow: "#eeeeee 0px 0px 15px",
+        borderRadius: "15px",
       }}>
       {/* top */}
       <div className="flex flex-col items-center gap-2.5">
         <p className="text-[18px] text-[#131313] font-medium "> {title} </p>
         <p className="text-[18px] text-[#131313] font-medium ">
           {" "}
-          <span className="text-[32px] font-bold leading-7 ">
+          <span className="text-[32px] font- leading-7 ">
             {" "}
             ${isToggled ? yearlyPrice : price}{" "}
           </span>
@@ -104,11 +104,11 @@ const SinglePricing = ({
       </div>
 
       {/* feature list */}
-      <div className="space-y-5 py-2 px-4 lg:p-6 bg-[#F9FAFB]">
+      <div className="space-y-8 py-8 rounded-lg  pl-2 lg:px-4 lg:p-6 bg-[#F9FAFB]">
         {serviceList &&
           serviceList?.map((item, index) => (
             <div className="flex items-start gap-2.5" key={index}>
-              <div className="w-6 h-6">
+              <div className="w-9 h-9">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -124,7 +124,7 @@ const SinglePricing = ({
                   />
                 </svg>
               </div>
-              <p className="text-[15px]  text-[#131313] font-normal  listingtag">
+              <p className="text-[18px]  text-[#131313] font-normal  listingtag">
                 {item}
               </p>{" "}
             </div>
@@ -140,7 +140,7 @@ const SinglePricing = ({
         className={
           activePlan && !currentPlan
             ? "text-base left-6 font-normal py-2.5 rounded-[30px] bg-[#bbb] border border-solid border-[#bbb]  ease-in-out duration-300  w-full text-center  "
-            : "text-base left-6 font-normal py-2.5 rounded-[30px] bg-[#fff] border border-solid border-primaryColor text-primaryColor ease-in-out duration-300 hover:bg-primaryColor hover:text-[#fff] w-full text-center  "
+            : "text-base left-6 font-normal py-2.5 rounded-xl bg-[#fff] border-2 border-solid  border-primaryColor text-primaryColor ease-in-out duration-300 hover:bg-primaryColor hover:text-[#fff] w-full text-center  "
         }>
         {currentPlan
           ? loading
