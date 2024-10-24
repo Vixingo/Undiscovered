@@ -28,8 +28,8 @@ const Layout = () => {
                     // </>
                 }
                 {pathname === "/" ||
-                pathname === "/Playerinfo" ||
-                pathname === "/Coachinfo" ? (
+                    pathname === "/Playerinfo" ||
+                    pathname === "/Coachinfo" ? (
                     <div
                         style={{
                             paddingTop: "75px",
@@ -52,8 +52,9 @@ const Layout = () => {
                         <ScrollToTop />
                     </div>
                 )}
+
+                {!(pathname === "/login" || pathname === "/sign-up") && <Footer />} {/* THIS LINE WAS BELOW */}
             </div>
-            {!(pathname === "/login" || pathname === "/sign-up") && <Footer />}
         </>
     );
 };
