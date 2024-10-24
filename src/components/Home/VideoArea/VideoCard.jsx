@@ -170,18 +170,19 @@ const VideoCard = ({ videoInfo }) => {
 
             {/* Title and description */}
             <a href="">
-                <h3 className="text-[18px] font-medium text-[#2684FC] hover:underline">
+                <h2 className="text-[16px] font-medium text-[#008CFF] hover:underline">
                     {videoInfo?.title}
-                </h3>
+                </h2>
             </a>
-            <p className="text-base text-[#666] font-medium">
+            <p className="text-[13px] text-[#171717] ">
                 {videoInfo?.description}
             </p>
-            <p className="text-sm text-[#bbb] font-thin">
+            {/* <p className="text-sm text-[#bbb] font-thin">
                 {formatDistanceToNow(new Date(videoInfo?.createdAt), {
                     locale: enUS,
                 })}
-            </p>
+            </p> */}
+            <p className="text-[#ED2023] text-[13px]"> Read More...</p>
         </div>
     );
 };
