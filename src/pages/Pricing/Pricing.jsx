@@ -43,10 +43,10 @@ const Pricing = () => {
   }, []);
 
   return (
-    <div>
+    <div className="lg:bg-white lg:px-36 rounded-xl mx-3 lg:pt-20 lg:pb-10">
       {/* top part */}
       <div className="flex flex-col items-center text-center">
-        <p className="text-base font-normal leading-6 text-[#0E0E0E]">
+        <p className="text-base font-medium leading-6 text-[#0E0E0E]">
           Pricing Plan
         </p>
         <h3 className="text-[22px]  font-bold leading-8 text-[#0E0E0E]">
@@ -57,28 +57,25 @@ const Pricing = () => {
         <div className="mt-10 flex items-center bg-primaryColor rounded-[30px] relative p-2">
           <p
             onClick={toggle}
-            className={`${commonPillStyle} ${
-              isMonthlyActive ? `text-primaryColor` : `text-[#fff]`
-            }`}>
+            className={`${commonPillStyle} ${isMonthlyActive ? `text-primaryColor` : `text-[#fff]`
+              }`}>
             Monthly
           </p>
           <p
             onClick={toggle}
-            className={`${commonPillStyle} ${
-              isYearlyActive ? `text-primaryColor` : `text-[#fff]`
-            }`}>
+            className={`${commonPillStyle} ${isYearlyActive ? `text-primaryColor` : `text-[#fff]`
+              }`}>
             Yearly
           </p>
 
           {/* pill */}
           <span
-            className={`w-[128px] h-10 bg-[#fff] rounded-[30px] ease-in-out duration-300 absolute top-1/2 -translate-y-1/2 ${
-              isToggled ? `left-[50%]` : "left-2 "
-            } z-10 `}></span>
+            className={`w-[128px] h-10 bg-[#fff] rounded-[30px] ease-in-out duration-300 absolute top-1/2 -translate-y-1/2 ${isToggled ? `left-[50%]` : "left-2 "
+              } z-10 `}></span>
         </div>
 
         {/* pricing listgt area */}
-        <div className="flex items-START flex-col lg:flex-row lg:gap-[30px] mt-5 lg:mt-[50px] mb-12 lg:mb-[100px] ">
+        <div className="flex items-START flex-col lg:flex-row gap-[30px] mt-5 lg:mt-[50px]  lg:mb-[50px] ">
           <SinglePricing
             isToggled={isToggled}
             isYearlyActive={isYearlyActive}
@@ -98,7 +95,9 @@ const Pricing = () => {
             serviceList={serviceList2}
             activePlan={activePlan}
             setActivePlan={setActivePlan}
+            popular={true}
           />
+
           <SinglePricing
             isToggled={isToggled}
             price={23.99}

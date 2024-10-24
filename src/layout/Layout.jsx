@@ -28,8 +28,8 @@ const Layout = () => {
                     // </>
                 }
                 {pathname === "/" ||
-                pathname === "/Playerinfo" ||
-                pathname === "/Coachinfo" ? (
+                    pathname === "/Playerinfo" ||
+                    pathname === "/Coachinfo" ? (
                     <div
                         style={{
                             paddingTop: "75px",
@@ -42,7 +42,7 @@ const Layout = () => {
                     </div>
                 ) : (
                     <div
-                        className="max-w-[1440px] mx-auto mt-10 px-3 lg:px-[20px]"
+                        className="max-w-full mx-auto mt-10 px-3 lg:px-[20px]"//testing modification -sign shahi
                         style={{
                             marginTop: "7.3rem",
                             zIndex: "2",
@@ -52,8 +52,9 @@ const Layout = () => {
                         <ScrollToTop />
                     </div>
                 )}
+
+                {!(pathname === "/login" || pathname === "/sign-up") && <Footer />} {/* THIS LINE WAS BELOW */}
             </div>
-            {!(pathname === "/login" || pathname === "/sign-up") && <Footer />}
         </>
     );
 };

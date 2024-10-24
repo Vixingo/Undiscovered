@@ -3,3 +3,22 @@
   text-align: left;
   line-height: 1.3rem;
 }
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('./fonts/SF-Pro-Display-Regular.otf') format('opentype'),
+       url('./fonts/SF-Pro-Display-Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('./fonts/SF-Pro-Display-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Add more weights and styles as necessary */
+body {
+  font-family: 'SF Pro Display', sans-serif;
+}
