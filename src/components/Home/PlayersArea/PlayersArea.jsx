@@ -110,7 +110,7 @@ const PlayersArea = ({ players, loading }) => {
                 </div>
             ) : (
                 <div className="player-box-home">
-                    <div className="grid grid-cols-1 lg:grid-cols-1 mt-[20px] justify-center  items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-1 mt-[20px] justify-center md:mx-3 items-center">
                         {players &&
                             players
                                 .filter((u) =>

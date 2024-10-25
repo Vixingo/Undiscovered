@@ -59,7 +59,7 @@ const SectionTop = ({ title, link = "/", isClass, setClass }) => {
 
     return (
         <div className="flex items-center justify-between pb-3">
-            <p className="text-[18px] font-medium text-black"> {title} </p>
+            <p className="text-[20px] font-medium text-black"> {title} </p>
 
             {isClass ? (
                 <>
@@ -79,7 +79,7 @@ const SectionTop = ({ title, link = "/", isClass, setClass }) => {
             </span> */}
                     {/* </label> */}
 
-                    <div className="inline-flex items-center cursor-pointer   space-x-2 w-[100px] lg:w-full max-w-[300px] ">
+                    <div className="inline-flex items-center cursor-pointer   space-x-2 w-[100px] lg:w-full max-w-[100px] ">
                         {/* <div className="flex flex-row items-center"> */}
                         <Select
                             value={selectedOption}
@@ -91,7 +91,7 @@ const SectionTop = ({ title, link = "/", isClass, setClass }) => {
                             options={positionOptions}
                             className="flex-grow"
                         />
-                        <button
+                        {/* <button
                             className="px-4 lg:block hidden py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
                             onClick={() => {
                                 setClass("");
@@ -99,7 +99,7 @@ const SectionTop = ({ title, link = "/", isClass, setClass }) => {
                             }}
                         >
                             Reset
-                        </button>
+                        </button> */}
                         {/* </div> */}
                     </div>
                 </>

@@ -26,7 +26,7 @@ const PlayerCard = ({ playerInfo, index }) => {
     }, []);
     return (
         <div
-            className={`flex items-center justify-between gap-6 w-full py-3 md:py-6 rounded-xl my-2 px-2 md:px-3 lg:px-8 drop-shadow-lg`}
+            className={`flex items-center justify-between gap-6 w-full py-3 sm:py-6 rounded-xl my-2 px-2 md:px-3 lg:px-8 drop-shadow-lg`}
             style={{ border: " 1px solid #D9D9D9" }}
         >
             {/* image */}
@@ -71,7 +71,7 @@ const PlayerCard = ({ playerInfo, index }) => {
             <div className=" mt-[10px]">
                 <Link
                     to={`/player-profile/${playerInfo?.auth?._id}`}
-                    className="p-2 md:py-2 md:px-5 text-[13px] bg-[#FF3333] bg-opacity-20 text-[#ED2023] rounded-[30px] border-solid font-normal  "
+                    className="p-2 md:py-2 md:px-5 text-[13px]  bg-[#FF3333] bg-opacity-20 text-[#ED2023] rounded-[30px] border-solid font-normal  "
                 >
                     {" "}
                     View Profile{" "}
