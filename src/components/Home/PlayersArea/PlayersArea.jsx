@@ -61,7 +61,7 @@ const PlayersArea = ({ players, loading }) => {
     };
 
     return (
-        <div className=" relative bg-white my-8 py-10 rounded-2xl px-10">
+        <div className=" relative bg-white my-8 py-10 rounded-2xl px-8">
             {/* top part */}
             <SectionTop title={"Top Player’s"} />
 

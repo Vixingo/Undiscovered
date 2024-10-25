@@ -26,55 +26,56 @@ const PlayerCard = ({ playerInfo, index }) => {
     }, []);
     return (
         <div
-            className={`flex items-center justify-center gap-7 w-full py-6 rounded-xl my-2 drop-shadow-lg`}
+            className={`flex items-center justify-between gap-6 w-full py-3 md:py-6 rounded-xl my-2 px-2 md:px-3 lg:px-8 drop-shadow-lg`}
             style={{ border: " 1px solid #D9D9D9" }}
         >
             {/* image */}
-            <div
-                style={{
-                    backgroundImage: `url(${playerInfo?.picture})`,
-                }}
-                className=" w-[100px] h-[100px] lg:w-[120px] lg:h-[120px] bg-center bg-no-repeat bg-cover rounded-full overflow-hidden "
-            ></div>
+            <div className="flex items-center gap-3">
+                <div
+                    style={{
+                        backgroundImage: `url(${playerInfo?.picture})`,
+                    }}
+                    className=" w-[70px] h-[70px] lg:w-[90px] lg:h-[90px] bg-center bg-no-repeat bg-cover rounded-full overflow-hidden "
+                ></div>
 
-            {/* info */}
-            <div className="flex flex-col gap-[2px]">
-                <Link to={`/player-profile/${playerInfo?.auth?._id}`}>
-                    <p className="text-[20px] cursor-pointer font-medium text-[#000] hover:underline hover:text-[#ED2023] leading-[30px]">
-                        {playerInfo?.auth?.name}
-                    </p>
-                </Link>
+                {/* info */}
+                <div className="flex flex-col gap-[2px]">
+                    <Link to={`/player-profile/${playerInfo?.auth?._id}`}>
+                        <p className="text-[16px] md:text-[20px] cursor-pointer font-medium text-[#000] hover:underline hover:text-[#ED2023] leading-[30px]">
+                            {playerInfo?.auth?.name}
+                        </p>
+                    </Link>
 
-                <div className="flex items-center text-base text-black opacity-60 font-normal gap-3 leading-6">
-                    <span className="after:">{playerInfo?.height}</span>l
-                    <span>{playerInfo?.position?.toUpperCase()}</span>l
-                    <span>{playerInfo?.class}</span>
-                </div>
-                <div className="text-base text-black opacity-60 font-normal leading-6 flex items-center gap-1 ">
-                    <CiLocationOn />{" "}
-                    <p>
-                        {" "}
-                        {playerInfo?.location
-                            ? playerInfo.location
-                                  .split(", ")
-                                  .slice(0, 2)
-                                  .join(", ")
-                            : "Location not available"}
-                    </p>
-                    {/* {player?.location
+                    <div className="flex items-center text-[14px] md:text-base text-black opacity-60 font-normal gap-2 leading-6">
+                        <span className="after:">{playerInfo?.height}</span>l
+                        <span>{playerInfo?.position?.toUpperCase()}</span>l
+                        <span>{playerInfo?.class}</span>
+                    </div>
+                    <div className="text-[14px] md:text-base text-black opacity-60 font-normal leading-6 flex items-center gap-1 ">
+                        <CiLocationOn />{" "}
+                        <p>
+                            {" "}
+                            {playerInfo?.location
+                                ? playerInfo.location
+                                      .split(", ")
+                                      .slice(0, 2)
+                                      .join(", ")
+                                : "Location not available"}
+                        </p>
+                        {/* {player?.location
             ? player.location.split(", ").slice(0, 2).join(", ")
             : "Location not available"} */}
+                    </div>
                 </div>
-
-                <div className="w-fit mt-[10px]">
-                    <Link
-                        to={`/player-profile/${playerInfo?.auth?._id}`}
-                        className="py-1 px-5 text-sm  rounded-[30px] border-solid border border-black "
-                    >
-                        {" "}
-                        View Profile{" "}
-                    </Link>
-                </div>
+            </div>
+            <div className=" mt-[10px]">
+                <Link
+                    to={`/player-profile/${playerInfo?.auth?._id}`}
+                    className="p-2 md:py-2 md:px-5 text-[13px] bg-[#FF3333] bg-opacity-20 text-[#ED2023] rounded-[30px] border-solid font-normal  "
+                >
+                    {" "}
+                    View Profile{" "}
+                </Link>
             </div>
         </div>
     );
