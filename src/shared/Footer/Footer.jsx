@@ -12,7 +12,7 @@ const Footer = () => {
   return (
 
     <>
-      <footer className="relative pt-8 lg:pt-[60px]">
+      <footer className="relative pt-8 lg:pt-[60px] mt-4">
         {/* Background image wrapper with white overlay */}
         <div className="lg:hidden absolute inset-0 bg-no-repeat bg-top bg-[url('./img/footerbg.jpeg')]"
           style={{ backgroundSize: '280%' }}>
@@ -37,10 +37,12 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-6">
                 <Link className="block w-[120px] h-[40px] overflow-hidden">
-                  <img className="w-full h-full object-contain" src={appstore} alt="" />
+                  <img className="w-full h-full object-contain hidden lg:block" src={appstore} alt="" />
+                  <img className="w-full h-full object-contain lg:hidden block rounded-lg" src="./img/gplay.png" alt="" />
                 </Link>
                 <Link className="block w-[120px] h-[40px] overflow-hidden">
-                  <img className="w-full h-full object-contain" src={playstore} alt="" />
+                  <img className="w-full h-full object-contain hidden lg:block" src={playstore} alt="" />
+                  <img className="w-full h-full object-contain lg:hidden block rounded-lg" src="./img/astore.png" alt="" />
                 </Link>
               </div>
             </div>

@@ -43,10 +43,19 @@ const Pricing = () => {
   }, []);
 
   return (
-    <div className="lg:bg-white lg:px-36 rounded-xl mx-3 lg:pt-20 lg:pb-10">
+    <div className="bg-white text-base rounded-xl mx-2 lg:mx-3 lg:pt-20 lg:px-36 lg:pb-10 pt-7 px-4 pb-4"
+      style={{
+        marginLeft: '0.75rem', // mx-2 for smaller screens
+        marginRight: '0.75rem', // mx-2 for smaller screens
+        '@media (min-width: 1024px)': {
+          marginLeft: '0.75rem', // lg:mx-3 (1rem)
+          marginRight: '0.75rem',
+        }
+      }}
+    >
       {/* top part */}
       <div className="flex flex-col items-center text-center">
-        <p className="text-base font-medium leading-6 text-[#0E0E0E]">
+        <p className=" font-medium leading-6 text-[#0E0E0E]">
           Pricing Plan
         </p>
         <h3 className="text-[22px]  font-bold leading-8 text-[#0E0E0E]">
@@ -75,7 +84,7 @@ const Pricing = () => {
         </div>
 
         {/* pricing listgt area */}
-        <div className="flex items-START flex-col lg:flex-row gap-[30px] mt-5 lg:mt-[50px]  lg:mb-[50px] ">
+        <div className="flex items-START flex-col lg:flex-row gap-[30px] mt-5 lg:mt-[50px] lg:mb-[50px] lg:px-32">
           <SinglePricing
             isToggled={isToggled}
             isYearlyActive={isYearlyActive}
