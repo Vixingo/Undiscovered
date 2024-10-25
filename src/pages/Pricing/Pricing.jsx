@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import SinglePricing from "./SinglePricing";
+import "./Price.css";
+import { Box } from "@mui/material";
 
 const Pricing = () => {
   const [isToggled, setIsToggled] = useState(false);
@@ -43,83 +45,76 @@ const Pricing = () => {
   }, []);
 
   return (
-    <div className="bg-white text-base rounded-xl mx-2 lg:mx-3 lg:pt-20 lg:px-36 lg:pb-10 pt-7 px-4 pb-4"
-      style={{
-        marginLeft: '0.75rem', // mx-2 for smaller screens
-        marginRight: '0.75rem', // mx-2 for smaller screens
-        '@media (min-width: 1024px)': {
-          marginLeft: '0.75rem', // lg:mx-3 (1rem)
-          marginRight: '0.75rem',
-        }
-      }}
-    >
-      {/* top part */}
-      <div className="flex flex-col items-center text-center">
-        <p className=" font-medium leading-6 text-[#0E0E0E]">
-          Pricing Plan
-        </p>
-        <h3 className="text-[22px]  font-bold leading-8 text-[#0E0E0E]">
-          Choose a plan that works for you
-        </h3>
-
-        {/* pricing trigger */}
-        <div className="mt-10 flex items-center bg-primaryColor rounded-[30px] relative p-2">
-          <p
-            onClick={toggle}
-            className={`${commonPillStyle} ${isMonthlyActive ? `text-primaryColor` : `text-[#fff]`
-              }`}>
-            Monthly
+    <Box sx={{ m: { xs: 3, md: 0 } }} className="">
+      <div className="bg-white text-base rounded-xl lg:pt-20 lg:px-36 lg:pb-10 pt-5 px-4 pb-4 mt-11 ">
+        {/* top part */}
+        <div className="flex flex-col items-center text-center">
+          <p className=" font-medium leading-6 text-[#0E0E0E]">
+            Pricing Plan
           </p>
-          <p
-            onClick={toggle}
-            className={`${commonPillStyle} ${isYearlyActive ? `text-primaryColor` : `text-[#fff]`
-              }`}>
-            Yearly
-          </p>
+          <h3 className="text-[22px]  font-bold leading-8 text-[#0E0E0E]">
+            Choose a plan that works for you
+          </h3>
 
-          {/* pill */}
-          <span
-            className={`w-[128px] h-10 bg-[#fff] rounded-[30px] ease-in-out duration-300 absolute top-1/2 -translate-y-1/2 ${isToggled ? `left-[50%]` : "left-2 "
-              } z-10 `}></span>
-        </div>
+          {/* pricing trigger */}
+          <div className="mt-10 flex items-center bg-primaryColor rounded-[30px] relative p-2">
+            <p
+              onClick={toggle}
+              className={`${commonPillStyle} ${isMonthlyActive ? `text-primaryColor` : `text-[#fff]`
+                }`}>
+              Monthly
+            </p>
+            <p
+              onClick={toggle}
+              className={`${commonPillStyle} ${isYearlyActive ? `text-primaryColor` : `text-[#fff]`
+                }`}>
+              Yearly
+            </p>
 
-        {/* pricing listgt area */}
-        <div className="flex items-START flex-col lg:flex-row gap-[30px] mt-5 lg:mt-[50px] lg:mb-[50px] lg:px-32">
-          <SinglePricing
-            isToggled={isToggled}
-            isYearlyActive={isYearlyActive}
-            price={12.99}
-            title={"Basic"}
-            yearlyPrice={140}
-            serviceList={serviceList}
-            activePlan={activePlan}
-            setActivePlan={setActivePlan}
-          />
-          <SinglePricing
-            isToggled={isToggled}
-            price={18.99}
-            isYearlyActive={isYearlyActive}
-            title={"Professional"}
-            yearlyPrice={205}
-            serviceList={serviceList2}
-            activePlan={activePlan}
-            setActivePlan={setActivePlan}
-            popular={true}
-          />
+            {/* pill */}
+            <span
+              className={`w-[128px] h-10 bg-[#fff] rounded-[30px] ease-in-out duration-300 absolute top-1/2 -translate-y-1/2 ${isToggled ? `left-[50%]` : "left-2 "
+                } z-10 `}></span>
+          </div>
 
-          <SinglePricing
-            isToggled={isToggled}
-            price={23.99}
-            isYearlyActive={isYearlyActive}
-            title={"Enterprise"}
-            yearlyPrice={259}
-            serviceList={serviceList3}
-            activePlan={activePlan}
-            setActivePlan={setActivePlan}
-          />
+          {/* pricing listgt area */}
+          <div className="flex items-START flex-col lg:flex-row gap-[30px] mt-5 lg:mt-[50px] lg:mb-[50px] lg:px-20">
+            <SinglePricing
+              isToggled={isToggled}
+              isYearlyActive={isYearlyActive}
+              price={12.99}
+              title={"Basic"}
+              yearlyPrice={140}
+              serviceList={serviceList}
+              activePlan={activePlan}
+              setActivePlan={setActivePlan}
+            />
+            <SinglePricing
+              isToggled={isToggled}
+              price={18.99}
+              isYearlyActive={isYearlyActive}
+              title={"Professional"}
+              yearlyPrice={205}
+              serviceList={serviceList2}
+              activePlan={activePlan}
+              setActivePlan={setActivePlan}
+              popular={true}
+            />
+
+            <SinglePricing
+              isToggled={isToggled}
+              price={23.99}
+              isYearlyActive={isYearlyActive}
+              title={"Enterprise"}
+              yearlyPrice={259}
+              serviceList={serviceList3}
+              activePlan={activePlan}
+              setActivePlan={setActivePlan}
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </Box>
   );
 };
 
