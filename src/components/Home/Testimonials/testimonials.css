@@ -72,7 +72,7 @@ h3 {
 } */
 
 .slick-dots {
-    bottom: -30px; /* Positioning dots below the slider cards */
+    /* bottom: -30px; Positioning dots below the slider cards */
 }
 
 .slick-dots li button:before {

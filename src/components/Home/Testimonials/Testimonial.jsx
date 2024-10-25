@@ -166,7 +166,7 @@ const Testimonials = ({ reviews }) => {
     // console.log("🚀 ~ reviews:", reviews);
     return (
         <div className="testimonials-container">
-            <h2 className="font-normal text-[30px] mb-8 ">Testimonial</h2>
+            <h2 className="font-normal text-[30px] my-6 ">Testimonial</h2>
             <Slider {...settings}>
                 {reviews?.map((testimonial, index) => (
                     <TestimonialCard key={index} testimonial={testimonial} />
