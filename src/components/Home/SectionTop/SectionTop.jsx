@@ -4,67 +4,67 @@ import { Link } from "react-router-dom";
 import Select from "react-select";
 
 const SectionTop = ({ title, link = "/", isClass, setClass }) => {
-  const [selectedOption, setSelectedOption] = useState({
-    value: "",
-    label: "All",
-  });
-  const positionOptions = [
-    { value: "", label: "All" },
+    const [selectedOption, setSelectedOption] = useState({
+        value: "",
+        label: "All",
+    });
+    const positionOptions = [
+        { value: "", label: "All" },
 
-    { value: "2024", label: "2024" },
-    { value: "2025", label: "2025" },
-  ];
+        { value: "2024", label: "2024" },
+        { value: "2025", label: "2025" },
+    ];
 
-  const customSelectStyles = {
-    control: (baseStyles, state) => ({
-      ...baseStyles,
-      borderColor: "#000", // Change border color
-      borderRadius: "8px", // Make it rounded
-      boxShadow: state.isFocused ? "0 0 0 1px #DBDBDB" : "none",
-      "&:focus": {
-        borderColor: "#DBDBDB", // Change border color on focus
-      }, // Optional: shadow on focus
-      "&:hover": {
-        borderColor: "#000",
-      },
-      cursor: "pointer",
-    }),
-    menu: (baseStyles) => ({
-      ...baseStyles,
-      zIndex: 9999,
-      color: "#000",
-    }),
-    option: (baseStyles, state) => ({
-      ...baseStyles,
-      backgroundColor: state.isSelected ? "#f33" : "white",
-      cursor: "pointer",
-    }),
-    placeholder: (baseStyles) => ({
-      ...baseStyles,
-      color: "#000",
-      borderColor: "#000",
-    }),
-    singleValue: (baseStyles) => ({
-      ...baseStyles,
-      color: "#000",
-    }),
-    dropdownIndicator: (base) => ({
-      ...base,
-      color: "inherit",
-      "&:hover": {
-        color: "inherit",
-      },
-    }),
-  };
+    const customSelectStyles = {
+        control: (baseStyles, state) => ({
+            ...baseStyles,
+            borderColor: "#000", // Change border color
+            borderRadius: "8px", // Make it rounded
+            boxShadow: state.isFocused ? "0 0 0 1px #DBDBDB" : "none",
+            "&:focus": {
+                borderColor: "#DBDBDB", // Change border color on focus
+            }, // Optional: shadow on focus
+            "&:hover": {
+                borderColor: "#000",
+            },
+            cursor: "pointer",
+        }),
+        menu: (baseStyles) => ({
+            ...baseStyles,
+            zIndex: 9999,
+            color: "#000",
+        }),
+        option: (baseStyles, state) => ({
+            ...baseStyles,
+            backgroundColor: state.isSelected ? "#f33" : "white",
+            cursor: "pointer",
+        }),
+        placeholder: (baseStyles) => ({
+            ...baseStyles,
+            color: "#000",
+            borderColor: "#000",
+        }),
+        singleValue: (baseStyles) => ({
+            ...baseStyles,
+            color: "#000",
+        }),
+        dropdownIndicator: (base) => ({
+            ...base,
+            color: "inherit",
+            "&:hover": {
+                color: "inherit",
+            },
+        }),
+    };
 
-  return (
-    <div className="flex items-center justify-between pb-3">
-      <p className="text-[20px] font-semibold text-black"> {title} </p>
+    return (
+        <div className="flex items-center justify-between pb-3">
+            <p className="text-[20px] font-medium text-black"> {title} </p>
 
-      {isClass ? (
-        <>
-          {/* <label class="inline-flex items-center cursor-pointer"> */}
-          {/* <span class="me-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+            {isClass ? (
+                <>
+                    {/* <label class="inline-flex items-center cursor-pointer"> */}
+                    {/* <span class="me-3 text-sm font-medium text-gray-900 dark:text-gray-300">
               All players
             </span>
             <input
@@ -77,43 +77,44 @@ const SectionTop = ({ title, link = "/", isClass, setClass }) => {
             <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">
               Class 24
             </span> */}
-          {/* </label> */}
+                    {/* </label> */}
 
-          <div className="inline-flex items-center cursor-pointer   space-x-2 w-[100px] lg:w-full max-w-[300px] ">
-            {/* <div className="flex flex-row items-center"> */}
-            <Select
-              value={selectedOption}
-              styles={customSelectStyles}
-              onChange={(e) => {
-                setClass(e.value);
-                setSelectedOption(e);
-              }}
-              options={positionOptions}
-              className="flex-grow"
-            />
-            <button
-              className="px-4 lg:block hidden py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
-              onClick={() => {
-                setClass("");
-                setSelectedOption({ value: "", label: "All" });
-              }}>
-              Reset
-            </button>
-            {/* </div> */}
-          </div>
-        </>
-      ) : (
-        <Link className="text-base text-black leading-5" to={link}>
-          View All{" "}
-        </Link>
-      )}
-    </div>
-  );
+                    <div className="inline-flex items-center cursor-pointer   space-x-2 w-[100px] lg:w-full max-w-[100px] ">
+                        {/* <div className="flex flex-row items-center"> */}
+                        <Select
+                            value={selectedOption}
+                            styles={customSelectStyles}
+                            onChange={(e) => {
+                                setClass(e.value);
+                                setSelectedOption(e);
+                            }}
+                            options={positionOptions}
+                            className="flex-grow"
+                        />
+                        {/* <button
+                            className="px-4 lg:block hidden py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
+                            onClick={() => {
+                                setClass("");
+                                setSelectedOption({ value: "", label: "All" });
+                            }}
+                        >
+                            Reset
+                        </button> */}
+                        {/* </div> */}
+                    </div>
+                </>
+            ) : (
+                <Link className="text-base text-black leading-5" to={link}>
+                    View All{" "}
+                </Link>
+            )}
+        </div>
+    );
 };
 
 SectionTop.propTypes = {
-  title: PropTypes.string,
-  link: PropTypes.string,
+    title: PropTypes.string,
+    link: PropTypes.string,
 };
 
 export default SectionTop;

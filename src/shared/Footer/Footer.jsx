@@ -24,7 +24,11 @@ const Footer = () => {
           <div className="flex flex-col items-center gap-[10px] justify-center mb-2 py-10 lg:bg-white lg:mx-8 rounded-xl">
             <div className="w-[100%] md:w-[32%]">
               <div className="w-[125px] h-[80px] scale-150 lg:scale-100 lg:w-[170px] lg:h-[120px] mx-auto mb-4 lg:mb-0">
-                <img className="w-full h-full object-contain" src={logo} alt="" />
+                <img
+                  className="w-full h-full object-contain"
+                  src={logo}
+                  alt=""
+                />
               </div>
             </div>
 
@@ -50,12 +54,13 @@ const Footer = () => {
 
           <hr className="border-2 lg:hidden block border-gray-500  h-1 mx-3" />
           <div className="px-10 lg:bg-white lg:gap-0 text-sm lg:text-base flex gap-4 lg:flex-row items-center flex-col-reverse justify-between mt-7 py-7">
-            <p className="text-center">© 2024 Undiscovered Recruits. | All Rights Reserved</p>
+            <p className="text-center">
+              © 2024 Undiscovered Recruits. | All Rights Reserved
+            </p>
             <p>Privacy Policy | Terms & Conditions</p>
           </div>
         </div>
       </footer>
-
     </>
   );
 };

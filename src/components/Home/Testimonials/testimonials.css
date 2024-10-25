@@ -1,46 +1,47 @@
 /* Testimonials Container */
 .testimonials-container {
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  background-color: #f9f9f900; /* Light grey background, change as needed */
-  text-align: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f8fafc; /* Light grey background, change as needed */
+    text-align: center;
 }
 
 /* Testimonial Card Styling */
 .testimonial-card {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 15px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
 }
 
 .personl_details {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1rem;
-  margin-bottom: 10px;
-  width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 40%;
+    margin-bottom: 10px;
 }
 /* Company Logo */
 .company-logo {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-  object-fit: cover;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
 }
 
 /* Name and Title Styling */
 h3 {
-  margin: 0px !important;
-  font-size: 20px !important;
-  color: #333; /* Dark grey text */
+    margin: 0px !important;
+    font-size: 20px !important;
+    color: #333; /* Dark grey text */
 }
 
 /* .title {
@@ -51,17 +52,18 @@ h3 {
 
 /* Testimonial Text */
 .testimonial {
-  font-size: 0.9em;
-  line-height: 1.6;
-  color: #444; /* Slightly lighter grey text */
-  text-align: left;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444; /* Slightly lighter grey text */
+    text-align: left;
+    font-weight: 500;
 }
 
 /* Star Rating */
 .rating {
-  color: #f5a623; /* Gold color for stars */
-  font-size: 1.2em;
-  margin-top: 10px;
+    color: #f5a623; /* Gold color for stars */
+    font-size: 1.2em;
+    margin-top: 10px;
 }
 
 /* Slick Slider Customizations */
@@ -70,45 +72,45 @@ h3 {
 } */
 
 .slick-dots {
-  bottom: -30px; /* Positioning dots below the slider cards */
+    /* bottom: -30px; Positioning dots below the slider cards */
 }
 
 .slick-dots li button:before {
-  font-size: 12px; /* Smaller dot size */
-  color: #ff0000; /* Light grey dots */
+    font-size: 12px; /* Smaller dot size */
+    color: #ff0000; /* Light grey dots */
 }
 
 .slick-dots li.slick-active button:before {
-  color: #ff0000; /* Darker dot when active */
+    color: #ff0000; /* Darker dot when active */
 }
 
 .slick-prev,
 .slick-next {
-  font-size: 25px;
-  line-height: 0;
-  position: absolute;
-  top: 50%;
+    font-size: 25px;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
 
-  display: block;
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  transform: translate(0, -50%);
-  cursor: pointer;
-  color: #ff0000 !important;
-  border: none;
-  outline: none;
-  background: #ff000000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: #ff0000 !important;
+    border: none;
+    outline: none;
+    background: #ff000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .slick-prev:hover,
 .slick-prev:focus,
 .slick-next:hover,
 .slick-next:focus {
-  color: #ff0000;
-  outline: none;
-  background: #00000000;
+    color: #ff0000;
+    outline: none;
+    background: #00000000;
 }

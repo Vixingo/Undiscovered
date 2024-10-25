@@ -196,9 +196,9 @@ export default function details() {
                 </div>
             </div>
             <div className="max-w-[1440px] mx-auto mt-10 px-3 bg-white rounded-[15px] py-12 ">
-                <h1 className="text-[25px] text-[#000] md:text-[30px]  font-[400] text-center mb-[40px] ">
+                {/* <h1 className="text-[25px] text-[#000] md:text-[30px]  font-[400] text-center mb-[40px] ">
                     CONNECT WITH COLLEGE COACHES ANYTIME, ANYWHERE
-                </h1>
+                </h1> */}
 
                 <div
                     className="flex flex-col	md:flex-row	 gap-[12px]"
