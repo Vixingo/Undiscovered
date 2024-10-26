@@ -4,7 +4,7 @@ import {
     createTheme,
 } from "@mui/material/styles";
 export const ThemeContext = React.createContext();
-
+import "../index.css";
 export const ThemeProvider = ({ children }) => {
     const [themeMode, setThemeMode] = useState("light");
 

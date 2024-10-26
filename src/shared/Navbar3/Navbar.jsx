@@ -18,7 +18,7 @@ import { Tab, Tabs } from "@mui/material";
 import Logo from "../../assets/images/logo.svg";
 import { CiSearch } from "react-icons/ci";
 import { AiFillInfoCircle } from "react-icons/ai";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 const drawerWidth = 240;
 const navItems = ["Home", "About", "Contact"];
 
@@ -104,13 +104,28 @@ function DrawerAppBar(props) {
 
     const container =
         window !== undefined ? () => window().document.body : undefined;
-
+    const { pathname } = useLocation();
     return (
         <Box sx={{ display: "flex" }}>
             <CssBaseline />
-            <AppBar component="nav" sx={{ backgroundColor: "#fff" }}>
-                <Toolbar sx={{ justifyContent: "space-between" }}>
-                    <Box sx={{ flex: 1, height: "50px" }}>
+            <AppBar
+                component="nav"
+                sx={{
+                    backgroundColor:
+                        pathname == "/Playerinfo"
+                            ? { xs: "#FFEBEB", md: "#fff" }
+                            : "#fff",
+                    boxShadow: pathname == "/Playerinfo" ? "none" : "",
+                    minHeight: "80px",
+                    justifyContent: { xs: "center", md: "flex-end" },
+                }}
+            >
+                <Toolbar
+                    sx={{
+                        justifyContent: "space-between",
+                    }}
+                >
+                    <Box sx={{ flex: 1, height: "55px" }}>
                         <Link to={"/"}>
                             <img src={Logo} style={{ height: "100%" }} />
                         </Link>
@@ -129,7 +144,9 @@ function DrawerAppBar(props) {
                         value={value}
                         onChange={handleChange}
                         centered
-                        sx={{ display: { xs: "none", md: "block" } }}
+                        sx={{
+                            display: { xs: "none", md: "flex" },
+                        }}
                     >
                         <Tab
                             label="Home"
@@ -236,10 +253,10 @@ function DrawerAppBar(props) {
                                 color: "#fff",
                                 fontWeight: "400",
                                 padding: "10px 45px 10px 10px",
-                                fontSize: "13px",
+                                fontSize: { xs: "12px", md: "13px" },
                                 borderRadius: "50px",
                                 position: "relative",
-                                width: "140px",
+                                width: { xs: "128px", md: "140px" },
                             }}
                             onClick={() => {
                                 navigate("/contact");

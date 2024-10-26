@@ -34,7 +34,7 @@ const Layout = () => {
                 pathname === "/Coachinfo" ? (
                     <Box
                         sx={{
-                            paddingTop: { xs: "55px", md: "75px" },
+                            paddingTop: { xs: "70px", md: "75px" },
                             zIndex: "1",
                             overflow: "hidden",
                         }}
@@ -56,7 +56,7 @@ const Layout = () => {
                 )}
                 {!(pathname === "/login" || pathname === "/sign-up") && (
                     <Footer />
-                )}{" "}
+                )}
                 {/* THIS LINE WAS BELOW */}
             </div>
         </>
