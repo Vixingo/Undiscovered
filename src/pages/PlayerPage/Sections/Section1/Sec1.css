@@ -12,6 +12,7 @@
 }
 
 .sub_main_div_of_sec1_player {
+    width: 70%;
     height: 80%;
     font-family: "SF Pro Display";
     display: flex;
@@ -29,7 +30,6 @@
     font-weight: 400;
     font-style: normal;
     margin-bottom: 40px;
-    max-width: 286px;
 }
 
 .sub_main_div_of_sec1_player > h1 > span {

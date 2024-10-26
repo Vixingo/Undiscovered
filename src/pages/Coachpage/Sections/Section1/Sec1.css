@@ -12,7 +12,7 @@
 }
 
 .sub_main_div_of_sec1_player {
-    max-width: 286px;
+    width: 70%;
     height: 80%;
 
     display: flex;
