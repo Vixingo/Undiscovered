@@ -60,7 +60,7 @@ const Login = () => {
                 {/* content wrapper */}
                 <div className=" h-screen w-full flex flex-col items-center justify-center bg-white px-4 z-10">
                     {/* top area */}
-                    <div className="mb-10">
+                    <div className="mb-10 z-10">
                         <AuthTop
                             title={"Welcome back!"}
                             subtitle={"Login to your account to get started!"}
@@ -161,7 +161,6 @@ const Login = () => {
             </div>
         </>
     );
-
 };
 
 export default Login;

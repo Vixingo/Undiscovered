@@ -17,7 +17,7 @@ const Footer = () => {
 
                 {/* Container for the actual content */}
                 <div className="relative mx-auto z-10">
-                    <div className="max-w-[1210px] flex flex-col items-center gap-[10px] justify-center mb-2 py-10 lg:bg-white lg:mx-8 rounded-xl">
+                    <div className="max-w-[1210px] mx-auto flex flex-col items-center gap-[10px] justify-center mb-2 py-10 lg:bg-white lg:mx-8 rounded-xl">
                         <div className="w-[100%] md:w-[32%]">
                             <div className="w-[125px] h-[80px] scale-150 lg:scale-100 lg:w-[170px] lg:h-[120px] mx-auto mb-4 lg:mb-0">
                                 <img
@@ -29,10 +29,6 @@ const Footer = () => {
                         </div>
 
                         <hr className="border-2 hidden lg:block border-gray-500 w-full h-1" />
-
-
-
-
 
                         <div className="flex items-center w-full justify-center px-16">
                             {/* first div */}
@@ -65,8 +61,12 @@ const Footer = () => {
                                     </div>
                                     <div className="flex lg:hidden gap-9 my-4">
                                         <Link className="text-black">Home</Link>
-                                        <Link className="text-black">About</Link>
-                                        <Link className="text-black">Contact us</Link>
+                                        <Link className="text-black">
+                                            About
+                                        </Link>
+                                        <Link className="text-black">
+                                            Contact us
+                                        </Link>
                                     </div>
                                     <div className="flex items-center gap-6">
                                         <Link className="block w-[120px] h-[40px] overflow-hidden">
@@ -97,14 +97,6 @@ const Footer = () => {
                                 </div>
                             </div>
                         </div>
-
-
-
-
-
-
-
-
                     </div>
 
                     <hr className="border-2 lg:hidden block border-gray-500  h-1 mx-3" />
@@ -112,7 +104,9 @@ const Footer = () => {
                         <p className="text-center">
                             © 2024 Undiscovered Recruits. | All Rights Reserved
                         </p>
-                        <p className="lg:hidden block">Privacy Policy | Terms & Conditions</p>
+                        <p className="lg:hidden block">
+                            Privacy Policy | Terms & Conditions
+                        </p>
                         <div className=" gap-3 text-2xl lg:flex hidden">
                             <FaFacebookF />
                             <FaTwitter />
