@@ -193,6 +193,7 @@ const PlayerRow = ({ player, user, reloadData }) => {
     } else {
         console.log("Location data is not available.");
     }
+
     return (
         <div className="flex flex-col items-center text-base font-medium text-[#171717] leading-normal pt-4 lg:px-4 border-solid border-[#DBDBDB] border-t min-w-fit w-full lg:w-full ">
             <div className="lg:flex hidden items-center w-full pb-[20px]">
@@ -206,11 +207,10 @@ const PlayerRow = ({ player, user, reloadData }) => {
                         />
                     </div>
                     <div>
-                        <Link
-                            to={`/player-profile/${player?.auth?._id}`}
-                            className="text-[18px] font-medium text-[#000] w-fit block "
-                        >
-                            {player?.auth?.name}
+                        <Link to={`/player-profile/${player?.auth?._id}`}>
+                            <p className="text-[16px] lg:text-[18px] font-medium text-[#000] w-fit block ">
+                                {player?.auth?.name}
+                            </p>
                         </Link>
                     </div>
                 </div>
@@ -292,7 +292,7 @@ const PlayerRow = ({ player, user, reloadData }) => {
             )}
           </div>
         )} */}
-                <div className="min-w-[200px] lg:flex-grow flex items-center gap-3">
+                <div className="min-w-[154px] lg:flex-grow flex items-center gap-3">
                     {player?.starRating || player?.starRating === 0
                         ? stars
                         : // <>
@@ -319,14 +319,14 @@ const PlayerRow = ({ player, user, reloadData }) => {
                 {/* open button */}
                 <button
                     onClick={() => setIsCollapsed(!isCollapsed)}
-                    className={`cursor-pointer ease-in-out duration-300 w-4 h-4 ${
+                    className={`cursor-pointer ease-in-out duration-300 w-2 h-2 lg:flex-grow ${
                         isCollapsed ? "rotate-180" : ""
                     }`}
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="12"
-                        height="7"
+                        width="10"
+                        height="6"
                         viewBox="0 0 12 7"
                         fill="none"
                         className="w-full h-full"
@@ -408,7 +408,7 @@ const PlayerRow = ({ player, user, reloadData }) => {
             >
                 <Collapse isOpened={isCollapsed}>
                     {/* teams wrapper */}
-                    <div className="flex items-center  w-100 Toggle_main_div_">
+                    {/* <div className="flex items-center  w-100 Toggle_main_div_">
                         <div className="toggel_show_div">
                             <div className="flex item-center gap-[10px]">
                                 <div className="overflow-hidden">
@@ -478,8 +478,8 @@ const PlayerRow = ({ player, user, reloadData }) => {
                                 </button>
                             </div>
                         </div>
-                    </div>
-                    <div className="social_icone_main_div flex items-center  lg:justify-center relative my-[18px] gap-[25px] w-full ">
+                    </div> */}
+                    {/* <div className="social_icone_main_div flex items-center  lg:justify-center relative my-[18px] gap-[25px] w-full ">
                         {player?.profile?.socialLinks?.find(
                             (u) => u?.social_type == "facebook"
                         ) ? (
@@ -582,7 +582,7 @@ const PlayerRow = ({ player, user, reloadData }) => {
                         ) : (
                             ``
                         )}
-                    </div>
+                    </div> */}
                     {/* <div className="w-full flex items-center lg:justify-center  ">
             <video
               src={player?.videos[0]?.video}
@@ -590,6 +590,7 @@ const PlayerRow = ({ player, user, reloadData }) => {
               controls
             />
           </div> */}
+
                     <div className="flex gap-[10px] flex-col ">
                         <div className="w-full flex items-center justify-center  lg:justify-center  ">
                             <div className="video-container mb-4 relative w-[full] rounded-[10px] bg-[#888888] overflow-hidden">

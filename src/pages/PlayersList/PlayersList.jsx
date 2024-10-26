@@ -191,7 +191,7 @@ const PlayersList = ({ isHome }) => {
                     </div>
 
                     {/* select options */}
-                    <div className="grid grid-cols-3  items-center justify-between  lg:flex-col lg:flex-row gap-3 lg:gap-0">
+                    <div className="grid grid-cols-3  items-center justify-between  lg:flex-col gap-3 lg:gap-0">
                         <div className=" w-full lg:w-[230px]">
                             <Select
                                 onChange={(e) => {

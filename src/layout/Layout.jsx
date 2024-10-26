@@ -28,8 +28,9 @@ const Layout = () => {
                     // </>
                 }
                 {pathname === "/" ||
-                    pathname === "/Playerinfo" ||
-                    pathname === "/Coachinfo" ? (
+                pathname === "/Playerinfo" ||
+                pathname === "/about" ||
+                pathname === "/Coachinfo" ? (
                     <div
                         style={{
                             paddingTop: "75px",

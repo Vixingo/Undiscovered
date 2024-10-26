@@ -67,7 +67,7 @@ const ClassPlayerArea = ({ classPlayers, allPlayers, loading }) => {
                                                     {player?.auth?.name}
                                                 </p>
                                             </Link>
-                                            <div className="m-0 flex items-center text-sm gap-2 font-thin text-[#171717] gap-[2px] lg:flex-row flex-col">
+                                            <div className="m-0 flex items-center text-sm  font-thin text-[#171717] gap-[2px] lg:flex-row flex-col">
                                                 <span>
                                                     {player?.position.toUpperCase()}
                                                 </span>
