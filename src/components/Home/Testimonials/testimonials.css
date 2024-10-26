@@ -40,7 +40,7 @@
 /* Name and Title Styling */
 h3 {
     margin: 0px !important;
-    font-size: 20px !important;
+    /* font-size: 20px !important; */
     color: #333; /* Dark grey text */
 }
 

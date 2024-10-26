@@ -60,13 +60,10 @@ export const ThemeProvider = ({ children }) => {
                 },
             },
             h3: {
-                fontSize: "30px",
-                // fontWeight: "700",
-                "@media (max-width:1440px)": {
-                    fontSize: "30px",
-                },
+                fontSize: "25px",
+
                 "@media (max-width:600px)": {
-                    fontSize: "25px",
+                    fontSize: "20px",
                 },
             },
             h4: {

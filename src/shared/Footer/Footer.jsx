@@ -11,7 +11,7 @@ import linkdin from "../../assets/images/svgs/linkdin.svg";
 const Footer = () => {
     return (
         <>
-            <footer className="relative mt-3 pt-8 lg:pt-[60px]">
+            <footer className="relative mt-3 pt-8 lg:pt-[30px]">
                 {/* Background image wrapper with white overlay */}
                 <div
                     className="lg:hidden absolute inset-0 bg-no-repeat bg-top bg-[url('./img/footerbg.jpeg')]"

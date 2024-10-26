@@ -3,7 +3,9 @@
     align-items: center;
     gap: 25px;
 }
-
+.from_main_div {
+    background-color: #fff;
+}
 .single--address .icon {
     width: 32px;
     height: 32px;

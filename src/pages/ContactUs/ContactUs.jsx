@@ -108,13 +108,13 @@ const ContactUs = () => {
                 </h1>
             </div>
             <div className="bg-white rounded-br-2xl rounded-bl-2xl ">
-                <div className="flex flex-col-reverse   text-center md:text-start	md:flex-row	justify-between max-w-[1200px]  mx-auto py-14 px-2 ">
+                <div className="flex flex-col text-center lg:text-start lg:flex-row justify-evenly gap-3 items-center lg:items-start mx-auto py-14 px-2 ">
                     <Box
                         sx={{
                             display: "flex",
                             flexDirection: "column",
                             alignItems: "center",
-                            maxWidth: "250px",
+                            maxWidth: "200px",
                         }}
                     >
                         <img src={"/img/emailpng.png"} />
@@ -130,6 +130,7 @@ const ContactUs = () => {
                         </Typography>
 
                         <Typography
+                            variant="h3"
                             sx={{
                                 color: "#333",
                                 fontSize: "25px",
@@ -218,7 +219,7 @@ const ContactUs = () => {
             {/* address area */}
 
             {/* contact form area */}
-            <div className=" my-[30px] lg:my-[30px] flex items-start lg:items-center gap-[30px] flex-col lg:flex-row ">
+            <div className=" mt-[30px] lg:mt-[30px] flex items-start md:items-center gap-[30px]  flex-col lg:flex-row ">
                 {/* <form className="contact--form flex-1 flex flex-col gap-6 lg:gap-[40px] w-full lg:w-auto">
           <div className="single--input">
             <label htmlFor="name">Name</label>
@@ -295,7 +296,16 @@ const ContactUs = () => {
                     onSubmit={onSubmit}
                 >
                     {({ isSubmitting }) => (
-                        <Form className="  from_main_div flex items-start lg:items-center gap-[30px] flex-col lg:flex-row bg-white p-9 rounded-xl">
+                        <Box
+                            sx={{
+                                backgroundColor: {
+                                    xs: "transparent",
+                                    md: "#fff",
+                                },
+                                padding: "50px 35px",
+                            }}
+                            className="from_main_div flex items-start lg:items-center gap-[30px] flex-col lg:flex-row  rounded-xl"
+                        >
                             <div className="contact--form  flex-1 flex flex-col gap-6 lg:gap-[40px] w-full lg:w-auto">
                                 <div className="single--input">
                                     <label htmlFor="name">Name</label>
@@ -354,13 +364,13 @@ const ContactUs = () => {
                                     Submit
                                 </button>
                             </div>
-                        </Form>
+                        </Box>
                     )}
                 </Formik>
                 {/* banner area */}
-                <div>
-                    <img src="/img/banner.png" alt="" />
-                </div>
+                <Box sx={{ paddingY: { sm: 0, md: 3 } }}>
+                    <img src="/img/banner.png" alt="" width={"100%"} />
+                </Box>
             </div>
             <Toaster />
         </div>
