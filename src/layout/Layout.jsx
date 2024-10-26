@@ -5,6 +5,7 @@ import Appbar from "../shared/Navbar/appbar";
 
 import ScrollToTop from "../components/ScrollTop";
 import Navbar3 from "../shared/Navbar3/Navbar";
+import { Box } from "@mui/material";
 
 const Layout = () => {
     const { pathname } = useLocation();
@@ -31,18 +32,18 @@ const Layout = () => {
                 pathname === "/Playerinfo" ||
                 pathname === "/about" ||
                 pathname === "/Coachinfo" ? (
-                    <div
-                        style={{
-                            paddingTop: "75px",
+                    <Box
+                        sx={{
+                            paddingTop: { xs: "55px", md: "75px" },
                             zIndex: "1",
                             overflow: "hidden",
                         }}
                     >
                         <Outlet />
                         <ScrollToTop />
-                    </div>
+                    </Box>
                 ) : (
-                    <div
+                    <Box
                         className="max-w-[1210px] mx-auto"
                         style={{
                             paddingTop: "75px",
@@ -51,7 +52,7 @@ const Layout = () => {
                     >
                         <Outlet />
                         <ScrollToTop />
-                    </div>
+                    </Box>
                 )}
                 {!(pathname === "/login" || pathname === "/sign-up") && (
                     <Footer />

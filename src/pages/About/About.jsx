@@ -58,7 +58,10 @@ const About = () => {
     return (
         <div>
             {/* top part */}
-            <div className="text-center text-[#0E0E0E] space-y-1 pt-6 lg:pt-12 pb-3 max-w-[1210px] mx-auto">
+            <Box
+                sx={{ marginX: { xs: 3, md: "auto" } }}
+                className="text-center text-[#0E0E0E] space-y-1 pt-6 lg:pt-12 pb-3 max-w-[1210px] "
+            >
                 <div className="space-y-1 text-[#FFF] text-center bg-primaryColor pt-[33px] pb-[37px] rounded-tr-[16px] rounded-tl-[16px]   ">
                     <p className="text-[25px] leading-6 font-normal ">
                         Undiscovered Recruit
@@ -94,7 +97,7 @@ const About = () => {
                 <div className="py-[30px]">
                     <img src="/img/about.png" alt="" width={"100%"} />
                 </div>
-            </div>
+            </Box>
             <Box
                 sx={{
                     color: "#fff",
@@ -126,7 +129,10 @@ const About = () => {
             </Box>
 
             {/* what we offer  */}
-            <div className=" py-[30px] max-w-[1210px] mx-auto">
+            <Box
+                sx={{ marginX: { xs: 3, md: "auto" } }}
+                className=" py-[30px] max-w-[1210px] "
+            >
                 {/* top part */}
                 {/* {loading ? (
                     <>
@@ -432,7 +438,7 @@ const About = () => {
                         </SingleAbout>
                     </div>
                 </Box>
-            </div>
+            </Box>
         </div>
     );
 };

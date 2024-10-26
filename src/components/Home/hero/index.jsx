@@ -13,7 +13,7 @@ export default function Hero() {
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 borderRadius: "15px",
-                margin: "35px",
+                margin: "30px 20px",
             }}
         >
             <div className="max-w-[1440px] mx-auto px-3 lg:px-[20px] min-h-screen flex items-center z-[100] pt-7">
@@ -49,7 +49,7 @@ export default function Hero() {
                     </p>
                     <div className="flex items-center gap-2 flex-col md:flex-row mt-4 justify-center">
                         <button
-                            className="w-full md:w-auto flex  items-center justify-center gap-2 text-sm leading-6 bg-primaryColor py-2 px-6 text-[#fff] border border-primaryColor rounded-[30px] w-fit"
+                            className=" md:w-auto flex  items-center justify-center gap-2 text-sm leading-6 bg-primaryColor py-2 px-6 text-[#fff] border border-primaryColor rounded-[30px] w-fit"
                             onClick={() => navigate("/pricing")}
                         >
                             Get Started
