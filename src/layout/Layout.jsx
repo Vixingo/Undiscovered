@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../shared/Navbar/Navbar";
 import Footer from "../shared/Footer/Footer";
+import Footer3 from "../shared/Footer3/Footer3";
 import Appbar from "../shared/Navbar/appbar";
 
 import ScrollToTop from "../components/ScrollTop";
@@ -29,9 +30,9 @@ const Layout = () => {
                     // </>
                 }
                 {pathname === "/" ||
-                pathname === "/Playerinfo" ||
-                pathname === "/about" ||
-                pathname === "/Coachinfo" ? (
+                    pathname === "/Playerinfo" ||
+                    pathname === "/about" ||
+                    pathname === "/Coachinfo" ? (
                     <Box
                         sx={{
                             paddingTop: { xs: "55px", md: "75px" },
@@ -55,7 +56,9 @@ const Layout = () => {
                     </Box>
                 )}
                 {!(pathname === "/login" || pathname === "/sign-up") && (
-                    <Footer />
+
+                    pathname === "/about" ? <Footer3 /> : <Footer />
+
                 )}{" "}
                 {/* THIS LINE WAS BELOW */}
             </div>
