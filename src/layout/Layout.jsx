@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../shared/Navbar/Navbar";
 import Footer from "../shared/Footer/Footer";
+import Footer3 from "../shared/Footer3/Footer3";
 import Appbar from "../shared/Navbar/appbar";
 
 import ScrollToTop from "../components/ScrollTop";
@@ -46,7 +47,7 @@ const Layout = () => {
                     <Box
                         className="max-w-[1210px] mx-auto"
                         style={{
-                            paddingTop: "75px",
+                            paddingTop: pathname === "/login" ? "0px" : "75px",
                             zIndex: "2",
                         }}
                     >
@@ -54,9 +55,8 @@ const Layout = () => {
                         <ScrollToTop />
                     </Box>
                 )}
-                {!(pathname === "/login" || pathname === "/sign-up") && (
-                    <Footer />
-                )}
+                {!(pathname === "/login" || pathname === "/sign-up") &&
+                    (pathname === "/about" ? <Footer3 /> : <Footer />)}{" "}
                 {/* THIS LINE WAS BELOW */}
             </div>
         </>
