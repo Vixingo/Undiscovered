@@ -31,9 +31,8 @@ const SinglePricing = ({
   const getSessionToken = async () => {
     const headers = {
       headers: {
-        authorization: `Bearer ${
-          JSON.parse(localStorage?.getItem("user"))?.token
-        }`,
+        authorization: `Bearer ${JSON.parse(localStorage?.getItem("user"))?.token
+          }`,
       },
     };
 
@@ -64,9 +63,8 @@ const SinglePricing = ({
     if (activePlan?.sessionId) {
       const headers = {
         headers: {
-          authorization: `Bearer ${
-            JSON.parse(localStorage?.getItem("user"))?.token
-          }`,
+          authorization: `Bearer ${JSON.parse(localStorage?.getItem("user"))?.token
+            }`,
         },
       };
       let response = await axios.post(
@@ -93,15 +91,15 @@ const SinglePricing = ({
       }}>
       {/* top */}
       {
-        popular?
-        <>
-        <div>
-          <button className="bg-[#ED2023] text-white rounded-lg w-36 h-10 ">Most Popular</button>
-        </div>
-        </>
-        :""
+        popular ?
+          <>
+            <div>
+              <button className="bg-[#ED2023] text-white rounded-lg w-36 h-10 ">Most Popular</button>
+            </div>
+          </>
+          : ""
       }
-      
+
       <div className="flex flex-col items-center gap-2.5">
         <p className="text-[18px] text-[#131313] font-medium "> {title} </p>
         <p className="text-[18px] text-[#131313] font-medium ">
@@ -135,7 +133,7 @@ const SinglePricing = ({
                   />
                 </svg>
               </div>
-              <p className="text-[18px]  text-[#131313] font-normal  listingtag">
+              <p className="text-[16px]  text-[#131313] font-normal  listingtag">
                 {item}
               </p>{" "}
             </div>

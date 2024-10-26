@@ -28,8 +28,8 @@ const Layout = () => {
                     // </>
                 }
                 {pathname === "/" ||
-                pathname === "/Playerinfo" ||
-                pathname === "/Coachinfo" ? (
+                    pathname === "/Playerinfo" ||
+                    pathname === "/Coachinfo" ? (
                     <div
                         style={{
                             paddingTop: "75px",
@@ -42,7 +42,7 @@ const Layout = () => {
                     </div>
                 ) : (
                     <div
-                        className="max-w-[1210px] mx-auto px-3 lg:px-[20px]" //testing modification -sign shahi
+                        className="max-w-[1210px] mx-auto"
                         style={{
                             paddingTop: "75px",
                             zIndex: "2",

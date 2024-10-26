@@ -2,16 +2,11 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.svg";
 import appstore from "../../assets/images/app-store.png";
 import playstore from "../../assets/images/google-play.png";
-import footerBg from "../../assets/images/footer-bg.png";
-import FB from "../../assets/images/svgs/facebook.svg";
-import insta from "../../assets/images/svgs/insta.svg";
-import x from "../../assets/images/svgs/x.svg";
-import linkdin from "../../assets/images/svgs/linkdin.svg";
 
 const Footer = () => {
     return (
         <>
-            <footer className="relative mt-3 pt-8 lg:pt-[30px]">
+            <footer className="relative pt-8 lg:pt-[20px] mt-4">
                 {/* Background image wrapper with white overlay */}
                 <div
                     className="lg:hidden absolute inset-0 bg-no-repeat bg-top bg-[url('./img/footerbg.jpeg')]"
@@ -43,15 +38,25 @@ const Footer = () => {
                             <div className="flex items-center gap-6">
                                 <Link className="block w-[120px] h-[40px] overflow-hidden">
                                     <img
-                                        className="w-full h-full object-contain"
+                                        className="w-full h-full object-contain hidden lg:block"
                                         src={appstore}
+                                        alt=""
+                                    />
+                                    <img
+                                        className="w-full h-full object-contain lg:hidden block rounded-lg"
+                                        src="./img/gplay.png"
                                         alt=""
                                     />
                                 </Link>
                                 <Link className="block w-[120px] h-[40px] overflow-hidden">
                                     <img
-                                        className="w-full h-full object-contain"
+                                        className="w-full h-full object-contain hidden lg:block"
                                         src={playstore}
+                                        alt=""
+                                    />
+                                    <img
+                                        className="w-full h-full object-contain lg:hidden block rounded-lg"
+                                        src="./img/astore.png"
                                         alt=""
                                     />
                                 </Link>
