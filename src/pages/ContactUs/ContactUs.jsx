@@ -98,7 +98,7 @@ const ContactUs = () => {
     };
 
     return (
-        <div>
+        <div className="px-6 lg:px-0">
             {/* top area */}
             <div className="space-y-1 text-[#FFF] text-center bg-primaryColor py-7 rounded-tr-[16px] rounded-tl-[16px] mt-[30px]  ">
                 <p className="text-[25px] leading-6 font-normal ">Contact Us</p>
@@ -219,77 +219,7 @@ const ContactUs = () => {
             {/* address area */}
 
             {/* contact form area */}
-            <div className=" mt-[30px] lg:mt-[30px] flex items-start md:items-center gap-[30px]  flex-col lg:flex-row ">
-                {/* <form className="contact--form flex-1 flex flex-col gap-6 lg:gap-[40px] w-full lg:w-auto">
-          <div className="single--input">
-            <label htmlFor="name">Name</label>
-            <input
-              value={state.name}
-              onChange={(e) => {
-                setState({
-                  ...state,
-                  name: e.target.value,
-                });
-              }}
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Write Name"
-            />
-          </div>
-          <div className="single--input">
-            <label htmlFor="email">Email</label>
-            <input
-              value={state.email}
-              onChange={(e) => {
-                setState({
-                  ...state,
-                  email: e.target.value,
-                });
-              }}
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Write Email"
-            />
-          </div>
-          <div className="single--input">
-            <label htmlFor="email">Mobile number</label>
-            <div className="phone_div">
-              <PhoneInput
-                value={state.mobilenumber}
-                international
-                countryCallingCodeEditable={false}
-                onChange={(mobilenumber) =>
-                  setState({ ...state, mobilenumber })
-                }
-                placeholder="Phone number"
-                name="phoneNumber"
-                id="phone"
-              />
-            </div>
-          </div>
-          <div className="single--input">
-            <label htmlFor="message">Message</label>
-            <textarea
-              name="message"
-              id="message"
-              value={state.message}
-              onChange={(e) => {
-                setState({
-                  ...state,
-                  message: e.target.value,
-                });
-              }}
-              placeholder="Write message"></textarea>
-          </div>
-
-          <button
-            onClick={contactNow}
-            className="py-2.5 px-[55px] bg-primaryColor text-sm leading-6 font-normal w-full lg:w-fit mr-auto rounded-[30px] text-[#fff] ">
-            Submit
-          </button>
-        </form> */}
+            <div className=" mt-[30px] lg:mt-[30px] flex items-start md:items-stretch gap-8 flex-col md:flex-row">
                 <Formik
                     initialValues={initialValues}
                     validationSchema={validationSchema}
@@ -302,7 +232,7 @@ const ContactUs = () => {
                                     xs: "transparent",
                                     md: "#fff",
                                 },
-                                padding: "50px 35px",
+                                padding: { xs: "0", md: "34px 35px" },
                             }}
                             className="from_main_div flex items-start lg:items-center gap-[30px] flex-col lg:flex-row  rounded-xl"
                         >
@@ -368,7 +298,7 @@ const ContactUs = () => {
                     )}
                 </Formik>
                 {/* banner area */}
-                <Box sx={{ paddingY: { sm: 0, md: 3 } }}>
+                <Box className={"form_iamge_div"}>
                     <img src="/img/banner.png" alt="" width={"100%"} />
                 </Box>
             </div>
