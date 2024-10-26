@@ -47,7 +47,7 @@ const Layout = () => {
                     <Box
                         className="max-w-[1210px] mx-auto"
                         style={{
-                            paddingTop: "75px",
+                            paddingTop: pathname === "/login" ? "0px" : "75px",
                             zIndex: "2",
                         }}
                     >

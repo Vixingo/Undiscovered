@@ -8,7 +8,7 @@ import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
 import { BASE_URL } from "../../baseurl/baseurl";
 // import Nvabar from "../../shared/Navbar2/Navbar";
-import Nvabar from "../../shared/Navbar3/Navbar";
+import Navbar from "../../shared/Navbar3/Navbar";
 const Login = () => {
     const [state, setState] = useState({
         email: "",
@@ -52,12 +52,15 @@ const Login = () => {
     return (
         <>
             <Toaster />
-            <Nvabar />
-            <div>
+            {/* <Navbar /> */}
+            <div className="relative">
+                <div className="absolute z-0 top-0 left-0">
+                    <img src="./img/mobAuth.png" alt="" />
+                </div>
                 {/* content wrapper */}
-                <div className="h-screen w-full flex flex-col items-center justify-center">
+                <div className=" h-screen w-full flex flex-col items-center justify-center bg-white px-4 z-10">
                     {/* top area */}
-                    <div>
+                    <div className="mb-10">
                         <AuthTop
                             title={"Welcome back!"}
                             subtitle={"Login to your account to get started!"}
@@ -145,17 +148,20 @@ const Login = () => {
 
                     {/* instruction text */}
 
-                    <p className="text-center text-[#0E0E0E] text-base leading-6 mt-12 ">
-                        Don’t have an account?{" "}
-                        <Link to={"/sign-up"} className="font-bold">
-                            {" "}
-                            Sign up
-                        </Link>
-                    </p>
+                    <div className=" fixed bottom-0">
+                        <p className="text-center text-[#0E0E0E] text-base leading-6 mt-12 pb-14">
+                            Don’t have an account?{" "}
+                            <Link to={"/sign-up"} className="font-bold">
+                                {" "}
+                                Sign up
+                            </Link>
+                        </p>
+                    </div>
                 </div>
             </div>
         </>
     );
+
 };
 
 export default Login;
