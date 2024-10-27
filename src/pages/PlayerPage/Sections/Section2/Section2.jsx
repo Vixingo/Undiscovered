@@ -21,7 +21,7 @@ const Section2 = () => {
         </div>
         <div className="sec2_seconddiv">
           <div className="text_of_sec2">
-            <h2>Maximize Your Potential</h2>
+            <h2>Comprehensive Player Search</h2>
             <p>
               In the competitive world of basketball recruiting, exposure is
               everything. With Undiscovered Hoops, you’ll rise above the

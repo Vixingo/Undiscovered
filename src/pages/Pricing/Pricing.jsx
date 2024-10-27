@@ -49,9 +49,7 @@ const Pricing = () => {
       <div className="bg-white text-base rounded-xl lg:pt-20 lg:px-36 lg:pb-10 pt-5 px-4 pb-4 mt-11 ">
         {/* top part */}
         <div className="flex flex-col items-center text-center">
-          <p className=" font-medium leading-6 text-[#0E0E0E]">
-            Pricing Plan
-          </p>
+          <p className=" font-medium leading-6 text-[#0E0E0E]">Pricing Plan</p>
           <h3 className="text-[22px]  font-bold leading-8 text-[#0E0E0E]">
             Choose a plan that works for you
           </h3>
@@ -60,21 +58,27 @@ const Pricing = () => {
           <div className="mt-10 flex items-center bg-primaryColor rounded-[30px] relative p-2">
             <p
               onClick={toggle}
-              className={`${commonPillStyle} ${isMonthlyActive ? `text-primaryColor` : `text-[#fff]`
-                }`}>
+              className={`${commonPillStyle} ${
+                isMonthlyActive ? `text-primaryColor` : `text-[#fff]`
+              }`}
+            >
               Monthly
             </p>
             <p
               onClick={toggle}
-              className={`${commonPillStyle} ${isYearlyActive ? `text-primaryColor` : `text-[#fff]`
-                }`}>
+              className={`${commonPillStyle} ${
+                isYearlyActive ? `text-primaryColor` : `text-[#fff]`
+              }`}
+            >
               Yearly
             </p>
 
             {/* pill */}
             <span
-              className={`w-[128px] h-10 bg-[#fff] rounded-[30px] ease-in-out duration-300 absolute top-1/2 -translate-y-1/2 ${isToggled ? `left-[50%]` : "left-2 "
-                } z-10 `}></span>
+              className={`w-[128px] h-10 bg-[#fff] rounded-[30px] ease-in-out duration-300 absolute top-1/2 -translate-y-1/2 ${
+                isToggled ? `left-[50%]` : "left-2 "
+              } z-10 `}
+            ></span>
           </div>
 
           {/* pricing listgt area */}

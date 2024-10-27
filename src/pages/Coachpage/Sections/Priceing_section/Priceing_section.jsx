@@ -49,14 +49,16 @@ const Priceing_section = () => {
             onClick={toggle}
             className={`${commonPillStyle} ${
               isMonthlyActive ? `text-primaryColor` : `text-[#fff]`
-            }`}>
+            }`}
+          >
             Monthly
           </p>
           <p
             onClick={toggle}
             className={`${commonPillStyle} ${
               isYearlyActive ? `text-primaryColor` : `text-[#fff]`
-            }`}>
+            }`}
+          >
             Yearly
           </p>
 
@@ -64,7 +66,8 @@ const Priceing_section = () => {
           <span
             className={`w-[128px] h-10 bg-[#fff] rounded-[30px] ease-in-out duration-300 absolute top-1/2 -translate-y-1/2 ${
               isToggled ? `left-[50%]` : "left-2 "
-            } z-10 `}></span>
+            } z-10 `}
+          ></span>
         </div>
 
         {/* pricing listgt area */}
