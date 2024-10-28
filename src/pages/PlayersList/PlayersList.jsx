@@ -140,12 +140,13 @@ const PlayersList = ({ isHome }) => {
                 ""
             ) : (
                 <div
-                    className="relative lg:w-[90%] lg:mx-auto"
+                    className="relative mx-4"
                     style={{
                         display: "flex",
                         flexDirection: "column",
                         gap: "1rem",
-                        paddingTop: "1rem",
+                        paddingTop: "1.1rem",
+                        paddingBottom: "1rem",
                     }}
                 >
                     {/* search bar */}

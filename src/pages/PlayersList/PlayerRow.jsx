@@ -229,7 +229,7 @@ const PlayerRow = ({ player, user, reloadData }) => {
                 </div>
                 {/* favourite */}
                 {JSON.parse(user)?.role === "coach" && (
-                    <div className="min-w-[170px] lg:w-[10%] ">
+                    <div className="min-w-[170px] lg:w-[10%] pl-3">
                         <button
                             onClick={() => Favourite(player._id, reloadData)}
                             // onClick={() => onFavourite(player._id, reloadData)}

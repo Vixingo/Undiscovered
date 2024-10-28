@@ -51,29 +51,49 @@ const Login = () => {
     return (
         <>
             <Toaster />
-            <div className="flex justify-start items-center">
+            <div className="flex justify-start items-center  ">
                 <div className="hidden lg:block">
-                    <img src="./img/auth.png" alt="" className="w-full object-cover" />
+                    <img
+                        src="./img/auth.png"
+                        alt=""
+                        className="w-full object-cover"
+                    />
                 </div>
-                <div className="relative flex-1 ">
-                    <div className="absolute z-0 top-0 left-0 lg:hidden">
-                        <img src="./img/mobAuth.png" alt="" />
+                <div className="relative flex-1 lg:max-w-[470px]">
+                    <div className="absolute z-0 top-0 left-0 lg:hidden w-full">
+                        <img
+                            src="./img/mobAuth.png"
+                            alt=""
+                            height={"242px"}
+                            width={"100%"}
+                        />
                     </div>
 
-                    <div className="h-screen w-full flex flex-col items-center pt-28 px-4 z-10">
+                    <div className="h-screen w-full flex flex-col items-center lg:items-start justify-start pt-16 px-4 z-10">
                         <div>
-                            <img src="./img/logo.svg" alt="" className="w-44 mb-4" />
+                            <img
+                                src="./img/logo.svg"
+                                alt=""
+                                className="w-0 md:w-44 mb-4 "
+                            />
                         </div>
                         <div className="z-10 mb-7">
                             <AuthTop
                                 title={"Welcome back!"}
-                                subtitle={"Login to your account to get started!"}
+                                subtitle={
+                                    "Login to your account to get started!"
+                                }
                             />
                         </div>
 
-                        <form onSubmit={login} className="flex flex-col auth--form w-full lg:w-[50%]">
+                        <form
+                            onSubmit={login}
+                            className="flex flex-col auth--form w-full lg:w-[50%]"
+                        >
                             <div className="">
-                                <p className="pt-3 pb-1 pl-1 text-black">Email</p>
+                                <p className="pt-3 pb-1 pl-1 text-black">
+                                    Email
+                                </p>
                                 <div className="w-full relative">
                                     <input
                                         value={state.email}
@@ -106,7 +126,9 @@ const Login = () => {
                                     </div>
                                 </div>
 
-                                <p className="pt-3 pb-1 pl-1 text-black">Password</p>
+                                <p className="pt-3 pb-1 pl-1 text-black">
+                                    Password
+                                </p>
                                 <div className="w-full relative">
                                     <input
                                         value={state.password}
@@ -116,7 +138,9 @@ const Login = () => {
                                                 [e.target.name]: e.target.value,
                                             })
                                         }
-                                        type={showPassword ? "text" : "password"}
+                                        type={
+                                            showPassword ? "text" : "password"
+                                        }
                                         name="password"
                                         id="password"
                                         placeholder="Password"
@@ -139,9 +163,15 @@ const Login = () => {
                                     </div>
                                     <div
                                         className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-xl text-gray-500"
-                                        onClick={() => setShowPassword(!showPassword)}
+                                        onClick={() =>
+                                            setShowPassword(!showPassword)
+                                        }
                                     >
-                                        {showPassword ? <IoEyeOff /> : <IoEye />}
+                                        {showPassword ? (
+                                            <IoEyeOff />
+                                        ) : (
+                                            <IoEye />
+                                        )}
                                     </div>
                                 </div>
 
