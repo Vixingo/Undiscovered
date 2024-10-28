@@ -51,7 +51,7 @@ const Login = () => {
     return (
         <>
             <Toaster />
-            <div className="flex justify-start items-center  ">
+            <div className="flex items-center gap-28 2xl:gap-44 ">
                 <div className="hidden lg:block">
                     <img
                         src="./img/auth.png"
@@ -59,7 +59,7 @@ const Login = () => {
                         className="w-full object-cover"
                     />
                 </div>
-                <div className="relative flex-1 lg:max-w-[470px]">
+                <div className="relative flex-1 lg:max-w-[470px] 2xl:max-w-2xl justify-center">
                     <div className="absolute z-0 top-0 left-0 lg:hidden w-full">
                         <img
                             src="./img/mobAuth.png"
@@ -69,7 +69,7 @@ const Login = () => {
                         />
                     </div>
 
-                    <div className="h-screen w-full flex flex-col items-center lg:items-start justify-start pt-16 px-4 z-10">
+                    <div className="h-screen w-full flex flex-col   justify-start lg:pt-16 pt-36  px-4 z-10">
                         <div>
                             <img
                                 src="./img/logo.svg"
@@ -88,7 +88,7 @@ const Login = () => {
 
                         <form
                             onSubmit={login}
-                            className="flex flex-col auth--form w-full lg:w-[50%]"
+                            className="flex flex-col auth--form w-full "
                         >
                             <div className="">
                                 <p className="pt-3 pb-1 pl-1 text-black">
@@ -175,7 +175,7 @@ const Login = () => {
                                     </div>
                                 </div>
 
-                                <Link className="w-fit ml-auto text-sm leading-6 text-[#0E0E0E] flex justify-end pt-[10px] mb-[36px]">
+                                <Link className="justify-end lg:justify-center ml-auto text-sm leading-6 text-[#0E0E0E] flex  pt-[10px] mb-[36px]">
                                     Forget password?
                                 </Link>
 
@@ -185,10 +185,10 @@ const Login = () => {
                             </div>
                         </form>
 
-                        <div className="fixed bottom-0">
-                            <p className="text-center text-[#0E0E0E] text-base leading-6 mt-12 pb-14">
+                        <div className=" mt-7">
+                            <p className="text-center text-[#0E0E0E] text-base leading-6 pt-48 lg:pt-0 lg:mt-12 pb-14">
                                 Don’t have an account?{" "}
-                                <Link to={"/sign-up"} className="font-bold">
+                                <Link to={"/sign-up"} className="font-bold text-black">
                                     {" "}
                                     Sign up
                                 </Link>
