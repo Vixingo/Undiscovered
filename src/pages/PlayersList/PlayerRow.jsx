@@ -8,6 +8,24 @@ import "toastr/build/toastr.min.css";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import ReactPlayer from "react-player";
+import * as React from "react";
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import Slide from "@mui/material/Slide";
+import { Box, IconButton, Typography } from "@mui/material";
+import { IoCloseOutline } from "react-icons/io5";
+import PersonAddAlt1Icon from "@mui/icons-material/PersonAddAlt1";
+import ToggleButton from "@mui/material/ToggleButton";
+import { LuYoutube } from "react-icons/lu";
+import StarRoundedIcon from "@mui/icons-material/StarRounded";
+import { SlSocialFacebook } from "react-icons/sl";
+import { IoLogoInstagram } from "react-icons/io5";
+import { RiTwitterXLine } from "react-icons/ri";
+import { TbMessageDots } from "react-icons/tb";
 const SingleTeam = ({ teamIcon, teamName }) => {
     return (
         <div className="flex flex-col items-center gap-2.5">
@@ -51,6 +69,8 @@ const PlayerRow = ({ player, user, reloadData }) => {
     }
 
     useEffect(() => {
+        console.log(player, "Plater 🔥🔥🔥🔥");
+
         if (
             player?.followedBy?.includes(
                 JSON.parse(localStorage.getItem("user"))?._id
@@ -193,7 +213,18 @@ const PlayerRow = ({ player, user, reloadData }) => {
     } else {
         console.log("Location data is not available.");
     }
+    // dialog
+    const [open, setOpen] = React.useState(false);
 
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+    // toggle
+    const [selected, setSelected] = React.useState(false);
     return (
         <div className="flex flex-col items-center text-base font-medium text-[#171717] leading-normal pt-4 lg:px-4 border-solid border-[#DBDBDB] border-t min-w-fit w-full lg:w-full ">
             <div className="lg:flex hidden items-center w-full pb-[20px]">
@@ -404,7 +435,7 @@ const PlayerRow = ({ player, user, reloadData }) => {
             <div
                 className={`${
                     isCollapsed ? "block" : "hidden"
-                } w-full py-4 bg-transparent`}
+                } w-full pt-4 pb-3 bg-transparent`}
             >
                 <Collapse isOpened={isCollapsed}>
                     {/* teams wrapper */}
@@ -593,56 +624,194 @@ const PlayerRow = ({ player, user, reloadData }) => {
 
                     <div className="flex gap-[10px] flex-col ">
                         <div className="w-full flex items-center justify-center  lg:justify-center  ">
-                            <div className="video-container mb-4 relative w-[full] rounded-[10px] bg-[#888888] overflow-hidden">
+                            <div className="video-container mb-4 relative rounded-[10px] bg-[#888888] overflow-hidden">
                                 <ReactPlayer
+                                    light={true}
                                     url={player?.video1}
                                     className="player_container_video"
                                     style={{
                                         borderRadius: 8,
                                     }}
+                                    width={"100%"}
+                                    height={"100%"}
+                                    onClickPreview={() => handleClickOpen()}
                                 />
-                                {/* <div
-                  className="video-overlay absolute inset-0 flex items-center justify-center"
-                  onClick={togglePlayPausePlayer}>
-                  {isPlaying2 ? (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="15"
-                      height="18"
-                      viewBox="0 0 15 18"
-                      fill="none">
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M4 2H1C0.447715 2 0 2.44772 0 3V15C0 15.5523 0.447715 16 1 16H4C4.55228 16 5 15.5523 5 15V3C5 2.44772 4.55228 2 4 2ZM14 2H11C10.4477 2 10 2.44772 10 3V15C10 15.5523 10.4477 16 11 16H14C14.5523 16 15 15.5523 15 15V3C15 2.44772 14.5523 2 14 2Z"
-                        stroke="white"
-                        strokeWidth="1.3"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  ) : (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="15"
-                      height="18"
-                      viewBox="0 0 15 18"
-                      fill="none">
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M14 8.78738C14 6.67844 3.19057 -0.0682953 1.96437 1.14481C0.73817 2.35792 0.620266 15.1025 1.96437 16.4299C3.30848 17.762 14 10.8963 14 8.78738Z"
-                        stroke="white"
-                        strokeWidth="1.3"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  )}
-                </div> */}
+                                <Dialog
+                                    open={open}
+                                    onClose={handleClose}
+                                    aria-labelledby="alert-dialog-title"
+                                    aria-describedby="alert-dialog-description"
+                                >
+                                    <DialogTitle id="alert-dialog-title">
+                                        <Box sx={{ display: "flex", gap: 2 }}>
+                                            <img
+                                                className="w-[60px] h-[60px] rounded-full object-cover"
+                                                src={player?.picture}
+                                                alt=""
+                                            />
+                                            <Box>
+                                                <Typography variant="h5">
+                                                    {player?.auth?.name}
+                                                </Typography>
+                                                <Typography variant="subtitle2">
+                                                    {
+                                                        player?.institute
+                                                            ?.universityName
+                                                    }
+                                                </Typography>
+                                                <Typography
+                                                    variant="subtitle2"
+                                                    lineHeight={"12px"}
+                                                >
+                                                    {player?.location}
+                                                </Typography>
+                                            </Box>
+                                        </Box>{" "}
+                                        <IconButton
+                                            aria-label="close"
+                                            onClick={handleClose}
+                                            sx={(theme) => ({
+                                                position: "absolute",
+                                                right: 12,
+                                                top: 24,
+                                                color: theme.palette.grey[500],
+                                            })}
+                                        >
+                                            <IoCloseOutline />
+                                        </IconButton>
+                                    </DialogTitle>
+                                    <DialogContent sx={{ p: 0 }}>
+                                        <div className="player-wrapper">
+                                            <ReactPlayer
+                                                className="react-player"
+                                                url={player?.video1}
+                                                width="100%"
+                                                height="100%"
+                                            />
+                                        </div>
+                                    </DialogContent>
+                                    {/* <DialogActions>
+                                        <Button onClick={handleClose}>
+                                            Disagree
+                                        </Button>
+                                        <Button onClick={handleClose} autoFocus>
+                                            Agree
+                                        </Button>
+                                    </DialogActions> */}
+                                </Dialog>
                             </div>
                         </div>
                     </div>
+                    <Box sx={{ mx: 1 }}>
+                        <Box
+                            sx={{
+                                display: "flex",
+                                alignItems: "stretch",
+                                justifyContent: "stretch",
+                                gap: 2,
+                                mb: "15px",
+                            }}
+                        >
+                            <Button
+                                variant="outlined"
+                                sx={{
+                                    width: "100%",
+                                    borderColor: "#E6E6E6",
+                                    backgroundColor: "#F6F6F6",
+                                    borderRadius: "10px",
+                                }}
+                                color="black"
+                            >
+                                <LuYoutube size={"25px"} />
+                            </Button>
+                            <Button
+                                variant="outlined"
+                                sx={{
+                                    width: "100%",
+                                    borderColor: "#E6E6E6",
+                                    backgroundColor: "#F6F6F6",
+                                    borderRadius: "10px",
+                                }}
+                                color="black"
+                            >
+                                <RiTwitterXLine size={"25px"} />
+                            </Button>
+                            <Button
+                                variant="outlined"
+                                sx={{
+                                    width: "100%",
+                                    borderColor: "#E6E6E6",
+                                    backgroundColor: "#F6F6F6",
+                                    borderRadius: "10px",
+                                }}
+                                color="black"
+                            >
+                                <IoLogoInstagram size={"25px"} />
+                            </Button>
+                            <Button
+                                variant="outlined"
+                                sx={{
+                                    width: "100%",
+                                    borderColor: "#E6E6E6",
+                                    backgroundColor: "#F6F6F6",
+                                    borderRadius: "10px",
+                                }}
+                                color="black"
+                            >
+                                <SlSocialFacebook size={"25px"} />
+                            </Button>
+                        </Box>
+                        <Box
+                            sx={{
+                                display: "flex",
+                                justifyContent: "stretch",
+                                gap: 2,
+                            }}
+                        >
+                            <Button
+                                variant="contained"
+                                startIcon={<PersonAddAlt1Icon />}
+                                sx={{
+                                    width: "100%",
+                                    borderRadius: "10px",
+                                    fontWeight: "400",
+                                    textTransform: "capitalize",
+                                    fontSize: "16px",
+                                }}
+                            >
+                                Follow
+                            </Button>
+                            <Button
+                                variant="outlined"
+                                startIcon={<TbMessageDots />}
+                                sx={{
+                                    width: "100%",
+                                    borderRadius: "10px",
+                                    fontWeight: "400",
+                                    textTransform: "capitalize",
+                                    fontSize: "16px",
+                                }}
+                            >
+                                Message
+                            </Button>
+                            <ToggleButton
+                                value="check"
+                                selected={selected}
+                                onChange={() =>
+                                    setSelected((prevSelected) => !prevSelected)
+                                }
+                                sx={{
+                                    borderRadius: "50%",
+                                    width: "50px",
+                                    height: "50px",
+                                }}
+                            >
+                                <StarRoundedIcon
+                                    sx={{ color: selected ? "#FFB800" : "" }}
+                                />
+                            </ToggleButton>
+                        </Box>
+                    </Box>
                 </Collapse>
             </div>
             <Toaster />

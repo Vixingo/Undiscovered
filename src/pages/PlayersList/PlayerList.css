@@ -76,11 +76,28 @@
     align-items: flex-start;
     justify-content: space-around;
 }
+.video-container {
+    width: 100%;
+
+    position: relative;
+    padding-top: 56.25%;
+}
 .player_container_video {
-    width: 430px !important;
-    height: 278px !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.player-wrapper {
+    position: relative;
+    width: 600px;
+    padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
 }
 
+.react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 @media screen and (min-width: 360px) {
     .player-list-table tr td,
     .player-list-table tr th {
@@ -89,6 +106,9 @@
     }
 }
 @media screen and (max-width: 540px) {
+    .player-wrapper {
+        width: 350px;
+    }
     .Toggle_main_div_ {
         justify-content: center;
     }

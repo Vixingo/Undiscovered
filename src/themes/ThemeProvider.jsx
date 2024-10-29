@@ -75,7 +75,10 @@ export const ThemeProvider = ({ children }) => {
             },
             h5: {
                 fontSize: "20px",
-                fontWeight: "600",
+                fontWeight: "500",
+                "@media (max-width:600px)": {
+                    fontSize: "16px",
+                },
             },
             h6: {
                 fontSize: "18px",
@@ -89,7 +92,11 @@ export const ThemeProvider = ({ children }) => {
                 color: "rgba(255,255,255,0.6)",
             },
             subtitle2: {
-                fontSize: "12px",
+                fontSize: "14px",
+                color: "rgba(0,0,0,0.6)",
+                "@media (max-width: 600px)": {
+                    fontSize: "12px",
+                },
             },
             body2: {
                 fontSize: "13px",

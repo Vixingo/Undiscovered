@@ -5,7 +5,13 @@
     overflow: hidden !important;
     border-radius: 8px;
 }
-
+.iconimages {
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
 .main_details_section {
     height: 450px;
 }

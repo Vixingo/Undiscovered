@@ -5,7 +5,7 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import img1 from "../../assets/images/Frame_1686556513.png";
 // import img2 from "../../assets/images/Frame_1686556514.png";
-import img2 from "../../assets/images/Frame_1686556514.jpeg";
+import img2 from "../../assets/images/Frame_1686556514.jpg";
 // import img3 from "/images/coach.jpg";
 // import img4 from "../../assets/images/player.jpg";
 import { useNavigate } from "react-router-dom";
@@ -104,7 +104,7 @@ export default function details() {
                         messaging features.
                     </p>
                 </div>
-                <div className="flex flex-col-reverse   text-center md:text-start	md:flex-row	justify-between max-w-[930px] mx-auto pb-12 px-4 ">
+                <div className="imageBox flex flex-col-reverse   text-center md:text-start	md:flex-row	justify-between max-w-[930px] mx-auto pb-12 px-4 ">
                     <Box
                         sx={{
                             display: "flex",
@@ -112,7 +112,10 @@ export default function details() {
                             alignItems: "center",
                         }}
                     >
-                        <img src={"/img/activepng.png"} />
+                        <img
+                            src={"/img/activepng.png"}
+                            className="iconimages"
+                        />
                         <Typography
                             variant="h2"
                             sx={{
@@ -134,7 +137,7 @@ export default function details() {
                             alignItems: "center",
                         }}
                     >
-                        <img src={"/img/player.png"} />
+                        <img src={"/img/player.png"} className="iconimages" />
                         <Typography
                             variant="h2"
                             sx={{
@@ -156,7 +159,7 @@ export default function details() {
                             alignItems: "center",
                         }}
                     >
-                        <img src={"/img/group.png"} />
+                        <img src={"/img/group.png"} className="iconimages" />
                         <Typography
                             variant="h2"
                             sx={{
@@ -178,7 +181,7 @@ export default function details() {
                             alignItems: "center",
                         }}
                     >
-                        <img src={"/img/videos.png"} />
+                        <img src={"/img/videos.png"} className="iconimages" />
                         <Typography
                             variant="h2"
                             sx={{

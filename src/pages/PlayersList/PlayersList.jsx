@@ -258,7 +258,7 @@ const PlayersList = ({ isHome }) => {
             )}
 
             {/* player table area */}
-            <div className=" pt-1  mb-8 lg:mb-[115px] overflow-x-auto min-w-full ">
+            <div className=" pt-1 mx-2 mb-8 lg:mb-[115px] overflow-x-auto ">
                 {players && (
                     <div>
                         {/* player heading */}
