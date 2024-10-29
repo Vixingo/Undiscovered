@@ -71,7 +71,7 @@ const PlayerCard = ({ playerInfo, index }) => {
             <div className=" mt-[10px]">
                 <Link
                     to={`/player-profile/${playerInfo?.auth?._id}`}
-                    className="p-2 lg:!px-8 text-[13px] lg:text-[16px] bg-[#FF3333] bg-opacity-20 text-[#ED2023] rounded-[30px] border-solid font-normal  "
+                    className="p-2 !lg:px-8 text-[13px] lg:text-[16px] bg-[#FF3333] bg-opacity-20 text-[#ED2023] rounded-[30px] border-solid font-normal  "
                 >
                     {" "}
                     View Profile{" "}
