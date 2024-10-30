@@ -112,7 +112,21 @@ const Section12 = () => {
     },
   ];
   return (
-    <div className="main_sec12_div">
+    <div className="main_sec12_div mb-7">
+
+
+      <div className="collapse collapse-plus bg-base-200">
+        <input type="radio" name="my-accordion-3" defaultChecked />
+        <div className="collapse-title text-xl font-medium">Click to open this one and close others</div>
+        <div className="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+
+
+
+
+
       <h2>Frequently Ask Questions</h2>
       <div className="div_of_FAQs">
         <Accordion className="main_accodion">
