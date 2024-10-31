@@ -3,7 +3,7 @@ import "./Section10.css";
 
 const Section10 = () => {
   return (
-    <div className="main_sec10_div">
+    <div className="main_sec10_div bg-white mx-auto max-w-[95%] rounded-b-2xl mb-5 pb-5">
       <div className="sub_main_sec10_div">
         <div className="heading_sec10_div">
           <h2>

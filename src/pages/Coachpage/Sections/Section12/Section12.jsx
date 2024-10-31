@@ -112,7 +112,7 @@ const Section12 = () => {
     },
   ];
   return (
-    <div className="main_sec12_div mb-7">
+    <div className="main_sec12_div  bg-white mx-auto max-w-[95%] rounded-2xl pt-16 pb-5 mt-5">
 
 
       <div className="collapse collapse-plus bg-base-200">
@@ -127,7 +127,7 @@ const Section12 = () => {
 
 
 
-      <h2>Frequently Ask Questions</h2>
+      <h2 className="mb-4">Frequently Ask Questions</h2>
       <div className="div_of_FAQs">
         <Accordion className="main_accodion">
           {FAQDAta?.map((item, index) => {

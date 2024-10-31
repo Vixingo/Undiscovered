@@ -68,7 +68,7 @@ const Layout = () => {
                     </Box>
                 )}
                 {!(pathname === "/login" || pathname === "/sign-up") &&
-                    (pathname === "/about" ? <Footer3 /> : <Footer />)}{" "}
+                    (pathname === "/about" ? <Footer3 /> : <Footer3 />)}{" "}
                 {/* THIS LINE WAS BELOW */}
             </div>
         </>

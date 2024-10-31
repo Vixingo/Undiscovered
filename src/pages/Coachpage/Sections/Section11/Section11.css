@@ -1,3 +1,8 @@
+*{
+  font-family: "SF Pro Display";
+}
+
+
 .main_sec11_div {
   width: 100%;
   height: 50vh;
@@ -78,8 +83,8 @@
   object-fit: contain;
 }
 .input_box {
-  width: 100%;
-  height: 40px;
+  width: 22rem;
+  height: 60px;
   border: 1px solid #ffffff;
   border-radius: 30px;
   padding: 5px 10px;
@@ -91,6 +96,7 @@
   outline: none;
   border: none;
   color: #ffffff;
+  padding-left: 2rem;
 }
 .input_box > input::placeholder {
   color: #ffffff;
