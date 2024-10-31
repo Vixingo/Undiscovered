@@ -79,8 +79,6 @@ const VideoCard = ({ videoInfo }) => {
         setIsPopupOpen(!isPopupOpen);
     };
 
-    useEffect(() => {});
-
     return (
         <div className="video-card relative">
             {/* Video area */}

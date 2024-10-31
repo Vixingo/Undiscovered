@@ -2,8 +2,24 @@ import { useEffect, useState } from "react";
 import VideoCard from "./VideoCard";
 import SectionTop from "../SectionTop/SectionTop";
 import "./VideoCard.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 const VideoArea = ({ videos, loading }) => {
     console.log("🚀 ~ VideoArea ~ videos:", videos);
+    // slider settings
+    const settings = {
+        customPaging: function (i) {
+            return <a>add thumbnail here</a>;
+        },
+        dots: true,
+        dotsClass: "slick-dots slick-thumb",
+        infinite: true,
+        arrows: false,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    };
     return (
         <div className="my-[50px] bg-white rounded-[15px] py-10 px-14">
             {/* top part */}
@@ -31,12 +47,31 @@ const VideoArea = ({ videos, loading }) => {
                     </div>
                 </div>
             ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  2xl:grid-cols-4 videos-wrapper gap-[30px] ">
-                    {videos &&
-                        videos?.map((item, index) => (
-                            <VideoCard key={index} videoInfo={item} />
-                        ))}
-                </div>
+                <>
+                    {/* <div className="slider-container grid grid-cols-1  grid-rows-1 h-[500px]  videos-wrapper gap-[30px]">
+                        <Slider {...settings}>
+                            {videos &&
+                                videos?.map((item, index) => (
+                                    <VideoCard key={index} videoInfo={item} />
+                                ))}
+                        </Slider>
+                    </div> */}
+                    <div className="w-full h-[195px] md:h-[645px] rounded-lg overflow-hidden mb-5">
+                        <div className="aspect-ratio-16-9 rounded-lg overflow-hidden">
+                            <iframe
+                                src={videos?.[0].video}
+                                frameBorder="0"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  2xl:grid-cols-4 videos-wrapper gap-[30px] ">
+                        {videos &&
+                            videos?.map((item, index) => (
+                                <VideoCard key={index} videoInfo={item} />
+                            ))}
+                    </div>
+                </>
             )}
         </div>
     );
