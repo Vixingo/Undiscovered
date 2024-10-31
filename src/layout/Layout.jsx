@@ -30,9 +30,10 @@ const Layout = () => {
                     // </>
                 }
                 {pathname === "/" ||
-                    pathname === "/Playerinfo" ||
-                    pathname === "/about" ||
-                    pathname === "/Coachinfo" ? (
+                pathname === "/Playerinfo" ||
+                pathname === "/about" ||
+                pathname === "/newsfeed" ||
+                pathname === "/Coachinfo" ? (
                     <Box
                         sx={{
                             paddingTop: { xs: "70px", md: "75px" },
@@ -47,8 +48,14 @@ const Layout = () => {
                     <Box
                         className=" mx-auto"
                         sx={{
-                            paddingTop: pathname === "/login" || pathname === "/sign-up" ? "0px" : "75px",
-                            maxWidth: pathname === "/login" || pathname === "/sign-up" ? "100%" : "1210px",
+                            paddingTop:
+                                pathname === "/login" || pathname === "/sign-up"
+                                    ? "0px"
+                                    : "75px",
+                            maxWidth:
+                                pathname === "/login" || pathname === "/sign-up"
+                                    ? "100%"
+                                    : "1210px",
                             backgroundColor: {
                                 xs: pathname === "/login" ? "#fff" : "",
                                 md: "unset",

@@ -6,6 +6,10 @@ import ReactDOM from "react-dom/client";
 export default defineConfig({
     server: {
         port: process.env.PORT,
+        hmr: {
+            host: "localhost",
+            overlay: false,
+        },
     },
     // base: "undiscovered-website",
     plugins: [react(), vercel()],
