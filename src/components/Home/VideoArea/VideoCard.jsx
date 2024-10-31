@@ -79,9 +79,12 @@ const VideoCard = ({ videoInfo }) => {
         setIsPopupOpen(!isPopupOpen);
     };
 
+    useEffect(() => {});
+
     return (
         <div className="video-card relative">
             {/* Video area */}
+
             <div className="w-full rounded-xl overflow-hidden mb-3 relative">
                 {videoInfo.type === "link" ? (
                     <div className="w-full h-[195px] lg:h-[185px] rounded-lg overflow-hidden">
@@ -167,7 +170,6 @@ const VideoCard = ({ videoInfo }) => {
                     </div>
                 </div>
             )}
-
             {/* Title and description */}
             <a href="">
                 <h2 className="text-[16px] font-medium text-[#008CFF] hover:underline">

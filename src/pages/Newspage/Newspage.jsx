@@ -236,8 +236,13 @@ export default function AvailablePlayers() {
 
                     <Typography
                         variant="h3"
+                        className="hover:underline hover:text-[#ee2023] cursor-pointer"
                         color="#000"
-                        sx={{ pt: 2, pb: 1, fontWeight: 400 }}
+                        sx={{
+                            pt: 2,
+                            pb: 1,
+                            fontWeight: 400,
+                        }}
                         onClick={() =>
                             navigate(`/news-article/${topNews?.[0]?._id}`)
                         }
@@ -376,7 +381,7 @@ export default function AvailablePlayers() {
                                         <Link to={`/news-article/${val?._id}`}>
                                             <div className="news-box-draft">
                                                 <div className="draft-cont">
-                                                    <h2 className="font-[16px] font-sfPro hover:underline">
+                                                    <h2 className="font-[16px] font-sfPro hover:underline hover:text-[#ed2023]">
                                                         {val?.title}
                                                     </h2>
                                                     <p className="text-[14px] font-normal ">
@@ -465,7 +470,7 @@ export default function AvailablePlayers() {
                                 </div>
 
                                 <h4
-                                    className="text-[18px] text-white cursor-pointer hover:underline hover:text-[#4c8fe1]"
+                                    className="text-[18px] text-white cursor-pointer hover:underline hover:text-[#ee2023]"
                                     onClick={() =>
                                         navigate(`/news-article/${item?._id}`)
                                     }
@@ -574,7 +579,7 @@ export default function AvailablePlayers() {
                                                     | {timeAgo}
                                                 </p>
                                             </div>
-                                            <h3 className="text-[#4c8fe1] text-[16px] font-medium leading-normal mb-2 mt-2 hover:underline">
+                                            <h3 className="text-[#000] text-[16px] font-medium leading-normal mb-2 mt-2 hover:underline hover:text-[#ed2023]">
                                                 {item?.title}
                                             </h3>
                                             <div className="flex ">

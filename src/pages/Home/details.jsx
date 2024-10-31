@@ -10,6 +10,10 @@ import img2 from "../../assets/images/Frame_1686556514.jpg";
 // import img4 from "../../assets/images/player.jpg";
 import { useNavigate } from "react-router-dom";
 import { Box, Button, Typography } from "@mui/material";
+import { IoPersonOutline } from "react-icons/io5";
+import { HiOutlineUserGroup } from "react-icons/hi2";
+import { RiVideoUploadLine } from "react-icons/ri";
+import { FaPersonRunning } from "react-icons/fa6";
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -112,10 +116,16 @@ export default function details() {
                             alignItems: "center",
                         }}
                     >
-                        <img
-                            src={"/img/activepng.png"}
-                            className="iconimages"
-                        />
+                        <Box
+                            sx={{
+                                backgroundColor: "#F8FAFC",
+                                padding: "40px",
+                                borderRadius: "50%",
+                            }}
+                        >
+                            <IoPersonOutline size={40} color="#ed2023" />
+                        </Box>
+
                         <Typography
                             variant="h2"
                             sx={{
@@ -137,7 +147,15 @@ export default function details() {
                             alignItems: "center",
                         }}
                     >
-                        <img src={"/img/player.png"} className="iconimages" />
+                        <Box
+                            sx={{
+                                backgroundColor: "#F8FAFC",
+                                padding: "40px",
+                                borderRadius: "50%",
+                            }}
+                        >
+                            <FaPersonRunning size={40} color="#ed2023" />
+                        </Box>
                         <Typography
                             variant="h2"
                             sx={{
@@ -159,7 +177,15 @@ export default function details() {
                             alignItems: "center",
                         }}
                     >
-                        <img src={"/img/group.png"} className="iconimages" />
+                        <Box
+                            sx={{
+                                backgroundColor: "#F8FAFC",
+                                padding: "40px",
+                                borderRadius: "50%",
+                            }}
+                        >
+                            <HiOutlineUserGroup size={40} color="#ed2023" />
+                        </Box>
                         <Typography
                             variant="h2"
                             sx={{
@@ -181,7 +207,15 @@ export default function details() {
                             alignItems: "center",
                         }}
                     >
-                        <img src={"/img/videos.png"} className="iconimages" />
+                        <Box
+                            sx={{
+                                backgroundColor: "#F8FAFC",
+                                padding: "40px",
+                                borderRadius: "50%",
+                            }}
+                        >
+                            <RiVideoUploadLine size={40} color="#ed2023" />
+                        </Box>
                         <Typography
                             variant="h2"
                             sx={{
