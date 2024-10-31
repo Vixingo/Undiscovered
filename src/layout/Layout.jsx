@@ -32,6 +32,7 @@ const Layout = () => {
                 {pathname === "/" ||
                 pathname === "/Playerinfo" ||
                 pathname === "/about" ||
+                pathname === "/newsfeed" ||
                 pathname === "/Coachinfo" ? (
                     <Box
                         sx={{

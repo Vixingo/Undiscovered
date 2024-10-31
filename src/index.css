@@ -28,7 +28,9 @@
     font-weight: bold;
     font-style: normal;
 }
-
+h3 {
+    font-family: "SF Pro Display";
+}
 body {
     font-family: "SF Pro Display", sans-serif;
     background-color: linear-gradient(
@@ -41,6 +43,7 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: "SF Pro Display";
 }
 .slick-arrow.slick-prev::before {
     display: none !important;
