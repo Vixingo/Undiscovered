@@ -8,6 +8,7 @@ import "toastr/build/toastr.min.css";
 import profile from "../../assets/images/coach-cover.png";
 import Logo from "../../assets/images/logo.svg";
 import { object } from "prop-types";
+import { Typography } from "@mui/material";
 
 const NewsArticle = () => {
     const navigate = useNavigate();
@@ -122,91 +123,147 @@ const NewsArticle = () => {
 
     return (
         <div>
-            {/* Top part */}
-            <div className="space-y-4">
-                <h3 className="text-2xl text-[#000] font-semibold">
+            <div className="mt-4 text-[#FFF] text-center bg-primaryColor pt-[33px] pb-[37px] rounded-tr-[16px] rounded-tl-[16px]   ">
+                <h1 className="text-[30px] font-bold leading-9 mt-3 text-white">
+                    {" "}
                     {state?.title}
-                </h3>
-                <p className="text-base text-[#000] leading-6">
+                </h1>
+                <p className="text-[20px] font-normal mt-2 ">
                     {formatDate(state?.updatedAt)}
                 </p>
-
-                <p className="text-base text-[#000] leading-6">
-                    Players Featured in this article:
-                </p>
-
-                {/* Hovered Player Details */}
-                <div className="flex items-center gap-5 overflow-x-auto lg:overflow-x-hidden pb-3 lg:pb-0">
-                    {state &&
-                        state?.featuredPlayers?.map((player, index) => (
-                            <div
-                                key={index}
-                                className="flex items-center gap-1 rounded-[50px] py-2 px-2 bg-[#F3F3F3]"
-                            >
-                                {/* Profile */}
-                                <div className="min-w-[50px] max-w-[50px] h-[50px] rounded-full overflow-hidden">
-                                    <img
-                                        className="w-full h-full object-cover"
-                                        src={
-                                            state?.players?.find(
-                                                (u) => u?.auth === player?._id
-                                            )?.picture
-                                        }
-                                        alt=""
-                                    />
-                                </div>
-
-                                {/* Details */}
-                                <div>
-                                    <p
-                                        onClick={() =>
-                                            navigate(
-                                                "/player-profile/" + player?._id
-                                            )
-                                        }
-                                        className="text-[#4C8FE1] cursor-pointer text-base font-medium leading-normal"
-                                    >
-                                        {
-                                            state?.featuredPlayers?.find(
-                                                (u) => u?._id === player?._id
-                                            )?.name
-                                        }
-                                    </p>
-
-                                    <div className="flex items-center gap-1 text-sm text-[#171717] font-medium leading-normal">
-                                        <span>
-                                            {state?.players
-                                                ?.find(
+            </div>
+            <div className="bg-white rounded-br-2xl rounded-bl-2xl m-0">
+                <Typography
+                    sx={{
+                        fontSize: "18px",
+                        padding: "30px",
+                        lineHeight: "35px",
+                        mb: "5px",
+                    }}
+                >
+                    {" "}
+                    <div
+                        className="w-[24px] h-[24px]"
+                        onClick={() => navigate(-1)}
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="17"
+                            height="15"
+                            viewBox="0 0 17 15"
+                            fill="none"
+                            className="w-full h-full"
+                        >
+                            <path
+                                d="M1.25 7.27441L16.25 7.27441"
+                                stroke="#130F26"
+                                strokeWidth="1.5"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            ></path>
+                            <path
+                                d="M7.2998 13.299L1.2498 7.275L7.2998 1.25"
+                                stroke="#130F26"
+                                strokeWidth="1.5"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            ></path>
+                        </svg>
+                    </div>
+                    <p className="text-base text-[#000] leading-6 mt-2 mb-2">
+                        Players Featured in this article:
+                    </p>
+                    {/* Hovered Player Details */}
+                    <div className="flex items-center gap-5 overflow-x-auto lg:overflow-x-hidden pb-3 lg:pb-0">
+                        {state &&
+                            state?.featuredPlayers?.map((player, index) => (
+                                <div
+                                    key={index}
+                                    className="flex items-center gap-3 rounded-[12px] py-3 px-3 bg-[#F3F3F3]"
+                                >
+                                    {/* Profile */}
+                                    <div className="min-w-[50px] max-w-[50px] h-[50px] rounded-full overflow-hidden">
+                                        <img
+                                            className="w-full h-full object-cover"
+                                            src={
+                                                state?.players?.find(
                                                     (u) =>
                                                         u?.auth === player?._id
+                                                )?.picture
+                                            }
+                                            alt=""
+                                        />
+                                    </div>
+
+                                    {/* Details */}
+                                    <div>
+                                        <p
+                                            onClick={() =>
+                                                navigate(
+                                                    "/player-profile/" +
+                                                        player?._id
                                                 )
-                                                ?.position?.toUpperCase()}
-                                        </span>
-                                        <span>
-                                            {
-                                                state?.players?.find(
-                                                    (u) =>
-                                                        u?.auth === player?._id
-                                                )?.height
                                             }
-                                        </span>
-                                        <span>
+                                            className="text-[#000] cursor-pointer text-[22px] font-medium leading-normal"
+                                        >
                                             {
-                                                state?.players?.find(
+                                                state?.featuredPlayers?.find(
                                                     (u) =>
-                                                        u?.auth === player?._id
-                                                )?.class
+                                                        u?._id === player?._id
+                                                )?.name
                                             }
-                                        </span>
+                                        </p>
+
+                                        <div className="flex items-center gap-2 text-sm text-[#171717] font-normal leading-normal">
+                                            <span>
+                                                {state?.players
+                                                    ?.find(
+                                                        (u) =>
+                                                            u?.auth ===
+                                                            player?._id
+                                                    )
+                                                    ?.position?.toUpperCase()}{" "}
+                                            </span>{" "}
+                                            |
+                                            <span>
+                                                {
+                                                    state?.players?.find(
+                                                        (u) =>
+                                                            u?.auth ===
+                                                            player?._id
+                                                    )?.height
+                                                }
+                                            </span>
+                                            |
+                                            <span>
+                                                {
+                                                    state?.players?.find(
+                                                        (u) =>
+                                                            u?.auth ===
+                                                            player?._id
+                                                    )?.class
+                                                }
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
-                </div>
+                            ))}
+                    </div>
+                    {/* News banner */}
+                    <div className="mt-3 w-full h-[300px] lg:h-[565px] rounded-xl overflow-hidden">
+                        <img
+                            className=" bannerimgofarical"
+                            src={state?.banner}
+                            alt=""
+                        />
+                    </div>
+                </Typography>
             </div>
+            {/* Top part */}
+            <div className="mb-4"></div>
 
             {/* Share Button */}
-            <div className="share-container">
+            {/* <div className="share-container">
                 <button onClick={handleShareClick} className="share-button">
                     Share
                 </button>
@@ -221,17 +278,10 @@ const NewsArticle = () => {
                         <button onClick={() => window.print()}>Print</button>
                     </div>
                 )}
+            </div> */}
+            <div className="bg-white rounded-2xl p-4">
+                <p dangerouslySetInnerHTML={{ __html: linkedDescription }}></p>
             </div>
-
-            {/* News banner */}
-            <div className="mt-6 mb-6 lg:mb-12 w-full h-[300px] lg:h-[565px] rounded-xl overflow-hidden">
-                <img
-                    className=" bannerimgofarical"
-                    src={state?.banner}
-                    alt=""
-                />
-            </div>
-
             {/* Auth0r  */}
             <div className="div_of_author_main">
                 <div className="Imgg_main_author_divv">

@@ -238,16 +238,14 @@ export default function AvailablePlayers() {
                         variant="h3"
                         color="#000"
                         sx={{ pt: 2, pb: 1, fontWeight: 400 }}
-                    >
-                        {topNews?.[0]?.title}
-                    </Typography>
-
-                    <div
-                        className="flex"
                         onClick={() =>
                             navigate(`/news-article/${topNews?.[0]?._id}`)
                         }
                     >
+                        {topNews?.[0]?.title}
+                    </Typography>
+
+                    <div className="flex">
                         <Typography sx={{ color: "#ED2023" }}>
                             {" "}
                             {topNews?.[0]?.title_of_author}
