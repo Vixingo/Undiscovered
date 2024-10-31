@@ -8,7 +8,8 @@ import "toastr/build/toastr.min.css";
 import profile from "../../assets/images/coach-cover.png";
 import Logo from "../../assets/images/logo.svg";
 import { object } from "prop-types";
-import { Typography } from "@mui/material";
+import { Box, Grid2, Typography } from "@mui/material";
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const NewsArticle = () => {
     const navigate = useNavigate();
@@ -123,7 +124,7 @@ const NewsArticle = () => {
 
     return (
         <div>
-            <div className="mt-4 text-[#FFF] text-center bg-primaryColor pt-[33px] pb-[37px] rounded-tr-[16px] rounded-tl-[16px]   ">
+            <div className="mt-4 text-[#FFF] text-center bg-primaryColor pt-[33px] pb-[37px] rounded-tr-[16px] px-2 rounded-tl-[16px]   ">
                 <h1 className="text-[30px] font-bold leading-9 mt-3 text-white">
                     {" "}
                     {state?.title}
@@ -280,10 +281,58 @@ const NewsArticle = () => {
                 )}
             </div> */}
             <div className="bg-white rounded-2xl p-4">
-                <p dangerouslySetInnerHTML={{ __html: linkedDescription }}></p>
+                <Grid2 container spacing={2}>
+                    <Grid2 size={{ xs: 12, md: 9 }}>
+                        <p
+                            dangerouslySetInnerHTML={{
+                                __html: linkedDescription,
+                            }}
+                        ></p>
+                    </Grid2>
+                    <Grid2
+                        size={{ xs: 12, md: 3 }}
+                        sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: 2,
+                        }}
+                    >
+                        <Box>
+                            <Typography>Published</Typography>
+                            <Typography
+                                sx={{ fontSize: "18px", fontWeight: "500" }}
+                            >
+                                {formatDate(state?.updatedAt)}
+                            </Typography>
+                        </Box>
+                        <Box>
+                            <Typography>Content</Typography>
+                            <Typography
+                                sx={{ fontSize: "18px", fontWeight: "500" }}
+                            >
+                                {state?.name_of_author}
+                            </Typography>
+                        </Box>
+                        <Box>
+                            <Typography>Share</Typography>
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    fontSize: "24px",
+                                    gap: 2,
+                                    mt: 1,
+                                }}
+                            >
+                                <FaFacebookF />
+                                <FaTwitter />
+                                <FaInstagram />
+                            </Box>
+                        </Box>
+                    </Grid2>
+                </Grid2>
             </div>
             {/* Auth0r  */}
-            <div className="div_of_author_main">
+            {/* <div className="div_of_author_main">
                 <div className="Imgg_main_author_divv">
                     <div className="image_div_author">
                         <div className="image_box_of_author">
@@ -299,7 +348,7 @@ const NewsArticle = () => {
                     <h4>{state?.title_of_author}</h4>
                     <p>{formatDate(state?.updatedAt)}</p>
                 </div>
-            </div>
+            </div> */}
 
             {/* News description */}
             <div className="news-article-description mb-[80px]">
@@ -333,9 +382,6 @@ const NewsArticle = () => {
                             </div>
                         )}
                     </div>
-                    <p
-                        dangerouslySetInnerHTML={{ __html: linkedDescription }}
-                    ></p>
                 </div>
             </div>
         </div>
