@@ -11,7 +11,7 @@ const Section7 = () => {
         <div className="sec2_seconddiv">
           <div className="img_of_sec2">
             <div className="image_box_sec2">
-              <img src={img7} alt="" />
+              <img src="./img/Group 2147226744.png" alt="" />
             </div>
           </div>
           <div className="text_of_sec2">

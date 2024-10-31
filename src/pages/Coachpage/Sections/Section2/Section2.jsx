@@ -31,9 +31,9 @@ const Section2 = () => {
               Sign Up
             </button>
           </div>
-          <div className="img_of_sec2">
+          <div className="img_of_sec2 flex justify-center">
             <div className="image_box_sec2">
-              <img src="./img/Group21312.png" alt="" />
+              <img src="./img/Group21312.png" alt="" className=" max-w-[354px]" />
             </div>
           </div>
         </div>

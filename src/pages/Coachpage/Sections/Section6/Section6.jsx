@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const Section6 = () => {
   const navigate = useNavigate();
   return (
-    <div className="main_section_div">
+    <div className="main_section_div bg-white mx-auto max-w-[95%] rounded-2xl mb-5 pb-5 mt-5">
       <div className="submain_div_of_sections">
         <div className="sec2_seconddiv">
           <div className="text_of_sec2">

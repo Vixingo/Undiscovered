@@ -11,7 +11,7 @@ const Section3 = () => {
         <div className="sec2_seconddiv">
           <div className="img_of_sec2">
             <div className="image_box_sec2">
-              <img src={img3} alt="" />
+              <img src={img3} alt="" className=" max-w-[354px]" />
             </div>
           </div>
           <div className="text_of_sec2">

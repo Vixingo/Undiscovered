@@ -33,7 +33,7 @@ const Priceing_section = () => {
   }, []);
 
   return (
-    <div>
+    <div className="bg-white mx-auto max-w-[95%] rounded-t-2xl mt-5 pt-20">
       {/* top part */}
       <div className="flex flex-col items-center text-center">
         <h3 className="text-[26px]  font-bold leading-8 text-[#0E0E0E]">
@@ -47,31 +47,28 @@ const Priceing_section = () => {
         <div className="mt-10 flex items-center bg-primaryColor rounded-[30px] relative p-2">
           <p
             onClick={toggle}
-            className={`${commonPillStyle} ${
-              isMonthlyActive ? `text-primaryColor` : `text-[#fff]`
-            }`}
+            className={`${commonPillStyle} ${isMonthlyActive ? `text-primaryColor` : `text-[#fff]`
+              }`}
           >
             Monthly
           </p>
           <p
             onClick={toggle}
-            className={`${commonPillStyle} ${
-              isYearlyActive ? `text-primaryColor` : `text-[#fff]`
-            }`}
+            className={`${commonPillStyle} ${isYearlyActive ? `text-primaryColor` : `text-[#fff]`
+              }`}
           >
             Yearly
           </p>
 
           {/* pill */}
           <span
-            className={`w-[128px] h-10 bg-[#fff] rounded-[30px] ease-in-out duration-300 absolute top-1/2 -translate-y-1/2 ${
-              isToggled ? `left-[50%]` : "left-2 "
-            } z-10 `}
+            className={`w-[128px] h-10 bg-[#fff] rounded-[30px] ease-in-out duration-300 absolute top-1/2 -translate-y-1/2 ${isToggled ? `left-[50%]` : "left-2 "
+              } z-10 `}
           ></span>
         </div>
 
         {/* pricing listgt area */}
-        <div className="flex items-center flex-col lg:flex-row lg:gap-[30px] mt-5 lg:mt-[50px] mb-12 lg:mb-[100px]">
+        <div className="flex items-center flex-col lg:flex-row lg:gap-[30px] mt-5 lg:mt-[50px] mb-3 max-w-sm">
           {/* <SinglePricing
             isToggled={isToggled}
             isYearlyActive={isYearlyActive}
