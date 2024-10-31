@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const Section2 = () => {
   const navigate = useNavigate();
   return (
-    <div className="sec2_main_div">
+    <div className="sec2_main_div bg-white mx-auto max-w-[95%] rounded-2xl mb-5 pb-5">
       <div className="sec2_sub_main_div">
         <div className="sec2_firstdiv">
           <h2>Streamline Your Recruiting and Connect with Top Talent</h2>
@@ -33,7 +33,7 @@ const Section2 = () => {
           </div>
           <div className="img_of_sec2">
             <div className="image_box_sec2">
-              <img src={img2} alt="" />
+              <img src="./img/Group21312.png" alt="" />
             </div>
           </div>
         </div>

@@ -48,8 +48,14 @@ const Layout = () => {
                     <Box
                         className=" mx-auto"
                         sx={{
-                            paddingTop: pathname === "/login" ? "0px" : "75px",
-                            maxWidth: pathname === "/login" ? "100%" : "1210px",
+                            paddingTop:
+                                pathname === "/login" || pathname === "/sign-up"
+                                    ? "0px"
+                                    : "75px",
+                            maxWidth:
+                                pathname === "/login" || pathname === "/sign-up"
+                                    ? "100%"
+                                    : "1210px",
                             backgroundColor: {
                                 xs: pathname === "/login" ? "#fff" : "",
                                 md: "unset",

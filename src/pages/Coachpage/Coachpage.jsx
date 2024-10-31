@@ -17,7 +17,7 @@ import Pricingsec from "./Sections/Priceing_section/Priceing_section";
 
 const Coachpage = () => {
   return (
-    <div>
+    <div className="bg-transparent">
       <Sec1 />
       <Sec2 />
       <Sec3 />
