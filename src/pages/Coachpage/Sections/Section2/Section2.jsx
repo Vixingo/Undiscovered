@@ -19,7 +19,7 @@ const Section2 = () => {
           </p>
         </div>
         <div className="sec2_seconddiv">
-          <div className="text_of_sec2">
+          <div className="text_of_sec2 ">
             <h2>Comprehensive Player Search</h2>
             <p>
               Gain access to our extensive player database, where you can search
@@ -27,7 +27,7 @@ const Section2 = () => {
               for the next big scorer or a defensive specialist, our platform
               makes it easy to find the right fit.
             </p>
-            <button className="sec2_btn" onClick={() => navigate("/sign-up")}>
+            <button className="sec2_btn " onClick={() => navigate("/sign-up")}>
               Sign Up
             </button>
           </div>

@@ -5,9 +5,9 @@ import { useNavigate } from "react-router-dom";
 const Section1 = () => {
     const navigate = useNavigate();
     return (
-        <div className="mian_sec1_coach">
-            <div className="sub_main_div_of_sec1_player">
-                <h1>
+        <div className="mian_sec1_coach ">
+            <div className="sub_main_div_of_sec1_player ">
+                <h1 className="wf">
                     Elevate Your Recruiting Game with
                     <span> Coaches +</span> <br />
                     Membership

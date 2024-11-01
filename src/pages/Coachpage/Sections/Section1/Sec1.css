@@ -62,4 +62,12 @@
     .sub_main_div_of_sec1_player > p {
         font-size: 18px;
     }
+    .mian_sec1_coach {
+        
+        background-size:cover;
+        height: 500px;
+        
+    }
+    
+    
 }
